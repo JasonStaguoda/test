@@ -1,0 +1,100 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<meta name= "robots" content= "all">
+		<meta name= "keywords" content= "">
+		<meta name= "description" content= "">
+		<meta name= "author" content= "F">
+		<!-- 移动端meta声明标签 -->
+		<meta name= "format-detection" content= "telphone=no, email=no">
+		<meta http-equiv= "Cache-Control" content= "no-transform">
+		<meta name= "apple-touch-fullscreen" content= "yes">
+		<meta name= "apple-mobile-web-app-capable" content= "yes">
+		<meta name= "apple-mobile-web-app-status-bar-style" content= "black-translucent">
+		<title>积分兑换，嗨翻国庆！</title>
+		<link rel= "shortcut icon" type= "image/x-icon" href= "">
+		<script src="flexible.js"></script>
+		<link rel= "stylesheet" href= "guoqing-active.css">
+	</head>
+
+	<body>
+		<div id="background_images" class="background_images">
+			<img class="top_bg" src="images/top_bg.jpg" alt="">
+			<img class="bottom_bg" src="images/bottom_bg.jpg" alt="">
+		</div>
+
+		<div id="guoqing_active" class="guoqing_active">
+			<p class="active_int">
+				积分当钱花！选择出行券类别、金额，点击兑换即可进入积<br>
+				分兑换界面，点击兑换即兑换对应面值的出行券<br>
+				（请确保手机账户中有充足积分，仅限中国电信用户）
+			</p>
+			<div class="active_table">
+				<p class="active_table_header">滴滴顺风车出行兑换券</p>
+				<ul class="active_table_cont">
+					<li class="active_table_cont_item clearfix">
+						<span class="active_table_cont_item_first">券面值</span>
+						<span>扣减积分值</span>
+						<span>电信积分</span>
+					</li>
+					<li class="active_table_cont_item clearfix">
+						<span class="active_table_cont_item_first">顺风车5元券</span>
+						<span>368</span>
+						<a href="#">兑换</a>
+					</li>
+				</ul>
+			</div>
+			<div class="active_table">
+				<p class="active_table_header">滴滴快车出行兑换券</p>
+				<ul class="active_table_cont">
+					<li class="active_table_cont_item clearfix">
+						<span class="active_table_cont_item_first">券面值</span>
+						<span>扣减积分值</span>
+						<span>电信积分</span>
+					</li>
+					<li class="active_table_cont_item clearfix">
+						<span class="active_table_cont_item_first">快车20元券</span>
+						<span>1995</span>
+						<a href="#">兑换</a>
+					</li>
+				</ul>
+			</div>
+			<div class="active_table">
+				<p class="active_table_header">滴滴专车出行兑换券</p>
+				<ul class="active_table_cont">
+					<li class="active_table_cont_item clearfix">
+						<span class="active_table_cont_item_first">券面值</span>
+						<span>扣减积分值</span>
+						<span>电信积分</span>
+					</li>
+					<li class="active_table_cont_item clearfix">
+						<span class="active_table_cont_item_first">专车5元券</span>
+						<span>420</span>
+						<a href="#">兑换</a>
+					</li>
+					<li class="active_table_cont_item clearfix">
+						<span class="active_table_cont_item_first">专车10元券</span>
+						<span>840</span>
+						<a href="#">兑换</a>
+					</li>
+					<li class="active_table_cont_item clearfix">
+						<span class="active_table_cont_item_first">专车20元券</span>
+						<span>1680</span>
+						<a href="#">兑换</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script>
+			window.onload = bgAutoHeight;
+			function bgAutoHeight() {
+				var box = document.getElementById("background_images");
+				var window_height = document.documentElement.clientHeight;
+				box.style.height = window_height + "px";
+			}
+		</script>
+	</body>
+</html>

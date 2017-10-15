@@ -221,7 +221,6 @@ input::-webkit-input-speech-button {
 	background-size: contain;
 	border: transparent solid .3rem;
 	border-left-width: .5rem;
-	cursor: pointer;
 }
 .guess_like_wrap {
 	width: 5.8rem;
@@ -330,7 +329,6 @@ body {
 	width: .36rem;
 	height: .36rem;
 	border: transparent solid;
-	cursor: pointer;
 }
 .public_header_back {
 	margin-left: -3.2rem;
@@ -506,7 +504,6 @@ body {
 	height: .64rem;
 	font-size: 14px;
 	line-height: .64rem;
-	letter-spacing: .01rem;
 	color: #1f2021;
 	background-color: #FFF;
 	border-top-left-radius: .05rem;
@@ -519,7 +516,6 @@ body {
 	background-color: #f8a624;
 	border-top-right-radius: .05rem;
 	border-bottom-right-radius: .05rem;
-	cursor: pointer;
 }
 .search_module_cont_search_box button i {
 	display: block;
@@ -540,7 +536,6 @@ body {
 	font-size: 12px;
 	color: #f8a624;
 	border-left: transparent solid .5rem;
-	cursor: pointer;
 }
 .search_module_cont_search_label {
 	margin-bottom: .36rem;
@@ -626,7 +621,6 @@ body {
 	margin-right: .2rem;
 	width: 1.77rem;
 	font-size: 14px;
-	line-height: .5rem;
 	text-align: center;
 	color: #bf955e;
 	border: #bf955e solid 1px;
@@ -639,9 +633,7 @@ body {
 }
 .details_operating_item a {
 	display: block;
-}
-.book_int_tit {
-	cursor: pointer;
+	line-height: .5rem;
 }
 .details_int_cont {
 	max-height: 100%;
@@ -649,7 +641,6 @@ body {
 	line-height: .36rem;
 	color: #4c4c4c;
 	border-bottom: #FFF solid .24rem;
-	cursor: pointer;
 }
 .int_omitted {
 	height: 1.08rem;
@@ -750,7 +741,6 @@ body {
 	background-color: #FFF;
 	border-radius: 50%;
 	box-shadow: 0 .02rem .1rem #888;
-	cursor: pointer;
 }
 .play_controls_progress_time {
 	margin: 0 auto;
@@ -779,7 +769,6 @@ body {
 	height: 1rem;
 	background-color: #f8a624;
 	border-radius: 50%;
-	cursor: pointer;
 }
 .play_controls_operating_prev,
 .play_controls_operating_next {
@@ -788,7 +777,6 @@ body {
 	height: .72rem;
 	background-color: #f8a624;
 	border-radius: 50%;
-	cursor: pointer;
 }
 .play_controls_operating_start i,
 .play_controls_operating_pause i,
@@ -851,7 +839,6 @@ body {
 .send_danmu {
 	border: transparent solid .25rem;
 	background-size: contain;
-	cursor: pointer;
 }
 .danmu_cont {
 	z-index: 1;
@@ -889,7 +876,7 @@ body {
 .play_popup_closeholver {
 	display: block;
 	z-index: 0;
-	background-color: red;
+	background-color: transparent;
 }
 .play_popup_show {
 	display: block;
@@ -960,7 +947,6 @@ body {
 	height: .9rem;
 	font-size: 14px;
 	line-height: .6rem;
-	letter-spacing: .01rem;
 	color: #1f2021;
 }
 .play_popup_submit {
@@ -970,7 +956,6 @@ body {
 	letter-spacing: .01rem;
 	color: #f8a624;
 	background-color: transparent;
-	cursor: pointer;
 }
 .play_popup_send_tit .module_tit_close {
 	margin-top: 0;
@@ -1003,7 +988,6 @@ body {
 .classification_module dl dt span,
 .classification_module dl dd span {
 	display: block;
-	cursor: pointer;
 }
 .classification_module dl dt span {
 	padding: 0 .2rem 0 .5rem;
@@ -1039,7 +1023,6 @@ body {
 	background-size: contain;
 	border: transparent solid .2rem;
 	border-left-width:.3rem;
-	cursor: pointer;
 }
 .classification_module_fixed {
 	position: fixed;
@@ -1092,18 +1075,19 @@ body {
 .ranking_first3_switch li a {
 	display: block;
 	width: 1.5rem;
+	height: .46rem;
 	line-height: .46rem;
 	font-size: .22rem;
 	text-align: center;
 	color: #f8a624;
 }
 .ranking_first3_switch_week a {
-	border-top-left-radius: .05rem;
-	border-bottom-left-radius: .05rem;
+	border-top-left-radius: .045rem;
+	border-bottom-left-radius: .045rem;
 }
 .ranking_first3_switch_all a {
-	border-top-right-radius: .05rem;
-	border-bottom-right-radius: .05rem;
+	border-top-right-radius: .045rem;
+	border-bottom-right-radius: .045rem;
 }
 .ranking_first3_switch .active a {
 	font-weight: bold;
@@ -1339,7 +1323,6 @@ body {
 	background-color:#FFF;
 	border: #fe5a5a solid 1px;
 	border-radius: .11rem;
-	cursor: pointer;
 }
 /*用户页相关 end*/
 

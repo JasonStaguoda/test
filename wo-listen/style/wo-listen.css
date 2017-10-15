@@ -1059,8 +1059,9 @@ body {
 	width: 4.3rem;
 }
 .ranking_first3_switch_wrap {
-	width: 4.52rem;
 	margin: .2rem 0 0 .73rem;
+	width: 4.52rem;
+	height: .46rem;
 	border: #f8a624 solid 1px;
 	border-radius: .05rem;
 	overflow: hidden;
@@ -1070,12 +1071,12 @@ body {
 }
 .ranking_first3_switch li {
 	float: left;
+	height: .46rem;
 	border-right: #f8a624 solid 1px;
 }
 .ranking_first3_switch li a {
 	display: block;
 	width: 1.5rem;
-	height: .46rem;
 	line-height: .46rem;
 	font-size: .22rem;
 	text-align: center;

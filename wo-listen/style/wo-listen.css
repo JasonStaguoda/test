@@ -1089,13 +1089,21 @@ body {
 	float: left;
 	border-right: #f8a624 solid 1px;
 }
-.ranking_first3_switch li a {
+/*.ranking_first3_switch li a {
 	display: table-cell;
 	width: 1.5rem;
 	height: .46rem;
 	font-size: .22rem;
 	text-align: center;
 	vertical-align: middle;
+	color: #f8a624;
+}*/
+.ranking_first3_switch li a {
+	display: block;
+	width: 1.5rem;
+	line-height: .46rem;
+	font-size: .22rem;
+	text-align: center;
 	color: #f8a624;
 }
 .ranking_first3_switch_week a {

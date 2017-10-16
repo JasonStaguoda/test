@@ -610,7 +610,7 @@ body {
 	float: left;
 	margin: .12rem .16rem 0 0;
 	padding: 0 .08rem;
-	font-size: 12px;
+	font-size: .16rem;
 	line-height: .28rem;
 	color: #8092ad;
 	border: #8092ad solid 1px;
@@ -710,8 +710,8 @@ body {
 	to {transform: rotate(360deg);}
 }
 .play_cd_rotate {
-	animation: CDrotate 30s linear infinite;
-	-webkit-animation: CDrotate 30s linear infinite;
+	animation: CDrotate 36s linear infinite;
+	-webkit-animation: CDrotate 36s linear infinite;
 }
 .play_cd_pause {
 	animation-play-state: paused;
@@ -1399,14 +1399,12 @@ body {
 }
 [data-dpr= "2"] .details_cont_info_detailed strong,
 [data-dpr= "2"] .details_cont_info_detailed i,
-[data-dpr= "2"] .details_cont_info_label em,
 [data-dpr= "2"] .play_controls_progress_time,
 [data-dpr= "2"] .search_module_cont_search_tit span {
 	font-size: 24px;
 }
 [data-dpr= "3"] .details_cont_info_detailed strong,
 [data-dpr= "3"] .details_cont_info_detailed i,
-[data-dpr= "3"] .details_cont_info_label em,
 [data-dpr= "3"] .play_controls_progress_time,
 [data-dpr= "3"] .search_module_cont_search_tit span {
 	font-size: 36px;
@@ -1448,7 +1446,6 @@ body {
 	}
 	.details_cont_info_detailed strong,
 	.details_cont_info_detailed i,
-	.details_cont_info_label em,
 	.play_controls_progress_time,
 	.search_module_cont_search_tit span {
 		font-size: 13px;

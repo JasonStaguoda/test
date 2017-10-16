@@ -1086,7 +1086,7 @@ body {
 	overflow: hidden;
 }
 .ranking_first3_switch {
-	width: 4.58rem;
+	width: 4.6rem;
 }
 .ranking_first3_switch li {
 	float: left;
@@ -1113,7 +1113,7 @@ body {
 	font-weight: bold;
 	color: #FFF;
 	/*background-color: #f8a624;*/
-	background-color: green;
+	background-color: red;
 }
 .ranking_first3_shows {
 	margin-top: .4rem;

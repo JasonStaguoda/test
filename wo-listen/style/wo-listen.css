@@ -1095,6 +1095,7 @@ body {
 	font-size: .22rem;
 	text-align: center;
 	color: #f8a624;
+	background-color: red;
 }
 .ranking_first3_switch_week a {
 	border-top-left-radius: .045rem;

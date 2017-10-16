@@ -609,9 +609,9 @@ body {
 .details_cont_info_label em {
 	float: left;
 	margin: .12rem .16rem 0 0;
-	padding: 0 .08rem;
+	padding: .04rem .08rem;
 	/*height: .28rem;*/
-	line-height: .28rem;
+	line-height: 1;
 	font-size: 12px;
 	color: #8092ad;
 	border: #8092ad solid 1px;

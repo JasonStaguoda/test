@@ -1093,7 +1093,7 @@ body {
 	display: block;
 	width: 1.5rem;
 	line-height: 1;
-	font-size: .22rem;
+	font-size: 14px;
 	text-align: center;
 	color: #f8a624;
 	background-color: red;
@@ -1393,7 +1393,8 @@ body {
 [data-dpr= "2"] .ranking_first3_shows_3 p,
 [data-dpr= "2"] .search_module_cont_search_box input,
 [data-dpr= "2"] .search_module_cont_search_label li a,
-[data-dpr= "2"] .play_popup_send_input {
+[data-dpr= "2"] .play_popup_send_input,
+[data-dpr= "2"] .ranking_first3_switch li a {
 	font-size: 28px;
 }
 [data-dpr= "3"] .book_int_info_author,
@@ -1410,7 +1411,8 @@ body {
 [data-dpr= "3"] .ranking_first3_shows_3 p,
 [data-dpr= "3"] .search_module_cont_search_box input,
 [data-dpr= "3"] .search_module_cont_search_label li a,
-[data-dpr= "3"] .play_popup_send_input {
+[data-dpr= "3"] .play_popup_send_input,
+[data-dpr= "3"] .ranking_first3_switch li a {
 	font-size: 42px;
 }
 [data-dpr= "2"] .details_cont_info_detailed strong,
@@ -1459,7 +1461,8 @@ body {
 	.ranking_first3_shows_3 p,
 	.search_module_cont_search_box input,
 	.search_module_cont_search_label li a,
-	.play_popup_send_input {
+	.play_popup_send_input,
+	.ranking_first3_switch li a {
 		font-size: 15px;
 	}
 	.details_cont_info_detailed strong,

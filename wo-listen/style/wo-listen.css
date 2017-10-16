@@ -606,6 +606,14 @@ body {
 	height: .48rem;
 	overflow: hidden;
 }
+
+
+
+
+
+
+
+
 .details_cont_info_label em {
 	float: left;
 	margin: .12rem .16rem 0 0;
@@ -617,6 +625,13 @@ body {
 	border: #8092ad solid 1px;
 	border-radius: .04rem;
 }
+
+
+
+
+
+
+
 .details_operating_wrap {
 	padding: .3rem 0;
 	width: 5.88rem;
@@ -1078,11 +1093,12 @@ body {
 	border-right: #f8a624 solid 1px;
 }
 .ranking_first3_switch li a {
-	display: block;
+	display: table-cell;
 	width: 1.5rem;
-	line-height: .46rem;
+	height: .46rem;
 	font-size: .22rem;
 	text-align: center;
+	vertical-align: middle;
 	color: #f8a624;
 }
 .ranking_first3_switch_week a {
@@ -1096,7 +1112,8 @@ body {
 .ranking_first3_switch .active a {
 	font-weight: bold;
 	color: #FFF;
-	background-color: #f8a624;
+	/*background-color: #f8a624;*/
+	background-color: red;
 }
 .ranking_first3_shows {
 	margin-top: .4rem;

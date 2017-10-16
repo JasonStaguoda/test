@@ -629,6 +629,7 @@ body {
 	float: left;
 	margin-right: .2rem;
 	width: 1.77rem;
+	height: .5rem;
 	font-size: 14px;
 	text-align: center;
 	color: #bf955e;
@@ -642,6 +643,7 @@ body {
 }
 .details_operating_item a {
 	display: block;
+	height: 100%;
 	line-height: .5rem;
 }
 .details_int_cont {

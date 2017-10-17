@@ -1102,7 +1102,8 @@ body {
 }
 .ranking_first3_switch .active button {
 	color: #FFF;
-	background-color: #f8a624;
+	background-color: red;
+	/*background-color: #f8a624;*/
 }
 .ranking_first3_shows {
 	margin-top: .4rem;

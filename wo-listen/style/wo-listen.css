@@ -1085,37 +1085,29 @@ body {
 .ranking_first3_switch {
 	width: 4.6rem;
 }
-.ranking_first3_switch li {
+.ranking_first3_switch a {
 	float: left;
 	border-right: #f8a624 solid 1px;
 }
-/*.ranking_first3_switch li a {
-	display: table-cell;
+.ranking_first3_switch a button {
 	width: 1.5rem;
 	height: .46rem;
-	font-size: .22rem;
-	text-align: center;
-	vertical-align: middle;
+	font-size: .26rem;
 	color: #f8a624;
-}*/
-.ranking_first3_switch li a {
-	display: block;
-	width: 1.5rem;
-	line-height: .46rem;
-	font-size: .22rem;
-	text-align: center;
-	color: #f8a624;
+	background-color: transparent;
 }
-.ranking_first3_switch_week a {
+.ranking_first3_switch_week {
 	border-top-left-radius: .05rem;
 	border-bottom-left-radius: .05rem;
 }
-.ranking_first3_switch_all a {
+.ranking_first3_switch_all {
 	border-top-right-radius: .05rem;
 	border-bottom-right-radius: .05rem;
 }
-.ranking_first3_switch .active a {
+.ranking_first3_switch .active {
 	font-weight: bold;
+}
+.ranking_first3_switch .active button {
 	color: #FFF;
 	background-color: #f8a624;
 }
@@ -1487,7 +1479,7 @@ body {
 [data-dpr= "2"] .details_operating_item,
 [data-dpr= "2"] .classification_module_fixed,
 [data-dpr= "2"] .ranking_first3_switch_wrap,
-[data-dpr= "2"] .ranking_first3_switch li,
+[data-dpr= "2"] .ranking_first3_switch a,
 [data-dpr= "2"] .user_sign_out {
 	border-width: 2px;
 }
@@ -1497,7 +1489,7 @@ body {
 [data-dpr= "3"] .details_operating_item,
 [data-dpr= "3"] .classification_module_fixed,
 [data-dpr= "3"] .ranking_first3_switch_wrap,
-[data-dpr= "3"] .ranking_first3_switch li,
+[data-dpr= "3"] .ranking_first3_switch a,
 [data-dpr= "3"] .user_sign_out {
 	border-width: 3px;
 }

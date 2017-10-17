@@ -49,12 +49,12 @@ dd { width: 1.2rem; text-align: center; border: #f8a624 solid 1px;}
 [data-dpr= "2"] dd {border-width: 2px;}
 [data-dpr= "3"] dd {border-width: 3px;}
 
-.fs_rem dd, .fs_rem .bt button {font-size: .2rem;}
-.fs_px dd, .fs_px .bt button {font-size: 14px;}
+.fs_rem dd, .fs_rem .bt button {font-size: .26rem;}
+.fs_px dd, .fs_px .bt button {font-size: 12px;}
 [data-dpr= "2"] .fs_px dd,
-[data-dpr= "2"] .fs_px .bt button {font-size: 28px;}
+[data-dpr= "2"] .fs_px .bt button {font-size: 24px;}
 [data-dpr= "3"] .fs_px dd,
-[data-dpr= "3"] .fs_px .bt button {font-size: 42px;}
+[data-dpr= "3"] .fs_px .bt button {font-size: 36px;}
 
 .lh {
 	line-height: .46rem;

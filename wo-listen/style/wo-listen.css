@@ -549,21 +549,20 @@ body {
 	margin-bottom: .36rem;
 	width: 6.1rem;
 }
-.search_module_cont_search_label li {
+.search_module_cont_search_label a {
 	float: left;
-}
-.search_module_cont_search_label li a {
-	display: block;
 	margin: 0 .1rem .14rem 0;
+}
+.search_module_cont_search_label a button {
 	padding: 0 .22rem;
 	font-size: 14px;
-	line-height: .48rem;
+	height: .48rem;
 	letter-spacing: .01rem;
 	color: #4d4d4d;
 	background-color: #FFF;
 	border-radius: .05rem;
 }
-.search_module_cont_search_label .special a {
+.search_module_cont_search_label .special button {
 	color: #fe5a5a;
 }
 /*搜索模块 end*/
@@ -606,29 +605,19 @@ body {
 	height: .48rem;
 	overflow: hidden;
 }
-
-
-
-
-
-
-
 .details_cont_info_label em {
 	float: left;
 	margin: .12rem .16rem 0 0;
-	padding: .04rem .08rem;
-	/*height: .28rem;*/
-	line-height: 1;
-	font-size: 12px;
-	color: #8092ad;
 	border: #8092ad solid 1px;
 	border-radius: .04rem;
 }
-
-
-
-
-
+.details_cont_info_label em button {
+	padding: 0 .08rem;
+	height: .3rem;
+	font-size: 12px;
+	color: #8092ad;
+	background-color: transparent;
+}
 .details_operating_wrap {
 	padding: .3rem 0;
 	width: 5.88rem;
@@ -640,18 +629,22 @@ body {
 .details_operating_item {
 	float: left;
 	margin-right: .2rem;
-	width: 1.77rem;
-	height: .5rem;
-	font-size: 14px;
-	text-align: center;
-	color: #bf955e;
 	border: #bf955e solid 1px;
 	border-radius: .06rem;
 }
+.details_operating_item button {
+	width: 1.77rem;
+	height: .5rem;
+	font-size: .24rem;
+	color: #bf955e;
+	background-color: transparent;
+}
 .strat_listen {
-	color: #FFF;
 	background-color: #f8a624;
 	border-color: transparent;
+}
+.strat_listen button {
+	color: #FFF;
 }
 .details_operating_item a {
 	display: block;
@@ -1092,7 +1085,7 @@ body {
 .ranking_first3_switch a button {
 	width: 1.5rem;
 	height: .46rem;
-	font-size: .26rem;
+	font-size: .24rem;
 	color: #f8a624;
 	background-color: transparent;
 }
@@ -1385,14 +1378,13 @@ body {
 [data-dpr= "2"] .guess_like_item_name,
 [data-dpr= "2"] .more_button,
 [data-dpr= "2"] .details_cont_info_detailed,
-[data-dpr= "2"] .details_operating_item,
 [data-dpr= "2"] .details_int_cont,
 [data-dpr= "2"] .module_tit_remarks,
 [data-dpr= "2"] .book_exhibition_item_info_cont,
 [data-dpr= "2"] .ranking_first3_shows_2 p,
 [data-dpr= "2"] .ranking_first3_shows_3 p,
 [data-dpr= "2"] .search_module_cont_search_box input,
-[data-dpr= "2"] .search_module_cont_search_label li a,
+[data-dpr= "2"] .search_module_cont_search_label a button,
 [data-dpr= "2"] .play_popup_send_input {
 	font-size: 28px;
 }
@@ -1402,27 +1394,26 @@ body {
 [data-dpr= "3"] .guess_like_item_name,
 [data-dpr= "3"] .more_button,
 [data-dpr= "3"] .details_cont_info_detailed,
-[data-dpr= "3"] .details_operating_item,
 [data-dpr= "3"] .details_int_cont,
 [data-dpr= "3"] .module_tit_remarks,
 [data-dpr= "3"] .book_exhibition_item_info_cont,
 [data-dpr= "3"] .ranking_first3_shows_2 p,
 [data-dpr= "3"] .ranking_first3_shows_3 p,
 [data-dpr= "3"] .search_module_cont_search_box input,
-[data-dpr= "3"] .search_module_cont_search_label li a,
+[data-dpr= "3"] .search_module_cont_search_label a button,
 [data-dpr= "3"] .play_popup_send_input {
 	font-size: 42px;
 }
 [data-dpr= "2"] .details_cont_info_detailed strong,
 [data-dpr= "2"] .details_cont_info_detailed i,
-[data-dpr= "2"] .details_cont_info_label em,
+[data-dpr= "2"] .details_cont_info_label em button,
 [data-dpr= "2"] .play_controls_progress_time,
 [data-dpr= "2"] .search_module_cont_search_tit span {
 	font-size: 24px;
 }
 [data-dpr= "3"] .details_cont_info_detailed strong,
 [data-dpr= "3"] .details_cont_info_detailed i,
-[data-dpr= "3"] .details_cont_info_label em,
+[data-dpr= "3"] .details_cont_info_label em button,
 [data-dpr= "3"] .play_controls_progress_time,
 [data-dpr= "3"] .search_module_cont_search_tit span {
 	font-size: 36px;
@@ -1452,19 +1443,18 @@ body {
 	.more_button,
 	.details_cont_info_detailed,
 	.details_int_cont,
-	.details_operating_item,
 	.module_tit_remarks,
 	.book_exhibition_item_info_cont,
 	.ranking_first3_shows_2 p,
 	.ranking_first3_shows_3 p,
 	.search_module_cont_search_box input,
-	.search_module_cont_search_label li a,
+	.search_module_cont_search_label a button,
 	.play_popup_send_input {
 		font-size: 15px;
 	}
 	.details_cont_info_detailed strong,
 	.details_cont_info_detailed i,
-	.details_cont_info_label em,
+	.details_cont_info_label em button,
 	.play_controls_progress_time,
 	.search_module_cont_search_tit span {
 		font-size: 13px;

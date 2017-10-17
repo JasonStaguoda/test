@@ -8,10 +8,20 @@
 		<meta name= "description" content= ""><!-- 网页内容简介 -->
 		<meta name= "author" content= "name, xxx@163.com"><!-- 作者姓名及邮箱 -->
 		<meta name= "copyright" content= ""><!-- 网站版权信息 -->
+		<!-- 移动端meta声明标签 -->
+		<meta name= "format-detection" content= "telphone=no, email=no">
+		<meta http-equiv= "Cache-Control" content= "no-transform">
+		<meta name= "apple-touch-fullscreen" content= "yes">
+		<meta name= "apple-mobile-web-app-capable" content= "yes">
+		<meta name= "apple-mobile-web-app-status-bar-style" content= "black-translucent">
 		<title>移动端单行文字垂直居中测试</title>
-		<link rel= "shortcut icon" type= "image/x-icon" href= "">
 		<link rel= "stylesheet" href= "">
 		<script>
+			/*
+			 * 来自 阿里手淘弹性布局方案 lib-flexible
+			 * 更改了换算方式和换算比例：var rem = 100 * (width / 750);
+			 * 框架原版 - https://github.com/amfe/lib-flexible
+			 */
 			;(function(win, lib) {
 				var doc = win.document;
 				var docEl = doc.documentElement;
@@ -21,6 +31,7 @@
 				var scale = 0;
 				var tid;
 				var flexible = lib.flexible || (lib.flexible = {});
+
 				if (metaEl) {
 					console.warn('将根据已有的meta标签来设置缩放比例');
 					var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
@@ -43,6 +54,7 @@
 						}
 					}
 				}
+
 				if (!dpr && !scale) {
 					var isAndroid = win.navigator.appVersion.match(/android/gi);
 					var isIPhone = win.navigator.appVersion.match(/iphone/gi);
@@ -62,6 +74,7 @@
 					}
 					scale = 1 / dpr;
 				}
+
 				docEl.setAttribute('data-dpr', dpr);
 				if (!metaEl) {
 					metaEl = doc.createElement('meta');
@@ -75,6 +88,7 @@
 						doc.write(wrap.innerHTML);
 					}
 				}
+
 				function refreshRem(){
 					var width = docEl.getBoundingClientRect().width;
 					// 设定最大宽度限制，这里等于 设计稿宽度
@@ -105,7 +119,9 @@
 						doc.body.style.fontSize = 12 * dpr + 'px';
 					}, false);
 				}
+
 				refreshRem();
+
 				flexible.dpr = win.dpr = dpr;
 				flexible.refreshRem = refreshRem;
 				flexible.rem2px = function(d) {
@@ -122,6 +138,7 @@
 					}
 					return val;
 				}
+
 			})(window, window['lib'] || (window['lib'] = {}));
 		</script>
 		<style>
@@ -169,7 +186,7 @@
 		</style>
 
 		<style>
-			body {width: 6.4rem; margin: 0 auto; margin-top: -.2rem;}
+			body {margin: -.3rem auto 0 auto; width: 6.4rem; overflow: hidden;}
 			div {margin: .6rem;}
 			dl {margin-bottom: .2rem;}
 			p { line-height: .6rem; font-size: .3rem; font-weight: bold;}
@@ -178,8 +195,8 @@
 			[data-dpr= "2"] dd {border-width: 2px;}
 			[data-dpr= "3"] dd {border-width: 3px;}
 
-			.fs_rem dd {font-size: .24rem;}
-			.fs_px dd {font-size: 16px;}
+			.fs_rem dd, .fs_rem .bt button {font-size: .24rem;}
+			.fs_px dd, .fs_px .bt button {font-size: 16px;}
 			[data-dpr= "2"] .fs_px dd,
 			[data-dpr= "2"] .fs_px .bt button {font-size: 32px;}
 			[data-dpr= "3"] .fs_px dd,
@@ -200,12 +217,6 @@
 				width: 100%;
 				height: .46rem;
 				background-color: transparent;
-			}
-			.fs_rem .bt button {
-				font-size: .24rem;
-			}
-			.fs_px .bt button {
-				font-size: 16px;
 			}
 		</style>
 	</head>

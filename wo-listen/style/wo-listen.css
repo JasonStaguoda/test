@@ -1085,7 +1085,7 @@ body {
 .ranking_first3_switch a button {
 	width: 1.5rem;
 	height: .46rem;
-	font-size: .24rem;
+	font-size: .22rem;
 	color: #f8a624;
 	background-color: transparent;
 }
@@ -1102,8 +1102,8 @@ body {
 }
 .ranking_first3_switch .active button {
 	color: #FFF;
-	background-color: red;
-	/*background-color: #f8a624;*/
+	/*background-color: red;*/
+	background-color: #f8a624;
 }
 .ranking_first3_shows {
 	margin-top: .4rem;

@@ -1,0 +1,254 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset= "utf-8"><!-- 网页字符编码 -->
+		<meta name= "robots" content= "all"><!-- 允许爬虫检索，none禁止 -->
+		<meta name= "keywords" content= ""><!-- 网页关键词 -->
+		<meta name= "description" content= ""><!-- 网页内容简介 -->
+		<meta name= "author" content= "name, xxx@163.com"><!-- 作者姓名及邮箱 -->
+		<meta name= "copyright" content= ""><!-- 网站版权信息 -->
+		<title>移动端单行文字垂直居中测试</title>
+		<link rel= "shortcut icon" type= "image/x-icon" href= "">
+		<link rel= "stylesheet" href= "">
+		<script>
+			;(function(win, lib) {
+				var doc = win.document;
+				var docEl = doc.documentElement;
+				var metaEl = doc.querySelector('meta[name="viewport"]');
+				var flexibleEl = doc.querySelector('meta[name="flexible"]');
+				var dpr = 0;
+				var scale = 0;
+				var tid;
+				var flexible = lib.flexible || (lib.flexible = {});
+				if (metaEl) {
+					console.warn('将根据已有的meta标签来设置缩放比例');
+					var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+					if (match) {
+						scale = parseFloat(match[1]);
+						dpr = parseInt(1 / scale);
+					}
+				} else if (flexibleEl) {
+					var content = flexibleEl.getAttribute('content');
+					if (content) {
+						var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+						var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+						if (initialDpr) {
+							dpr = parseFloat(initialDpr[1]);
+							scale = parseFloat((1 / dpr).toFixed(2));
+						}
+						if (maximumDpr) {
+							dpr = parseFloat(maximumDpr[1]);
+							scale = parseFloat((1 / dpr).toFixed(2));
+						}
+					}
+				}
+				if (!dpr && !scale) {
+					var isAndroid = win.navigator.appVersion.match(/android/gi);
+					var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+					var devicePixelRatio = win.devicePixelRatio;
+					if (isIPhone) {
+						// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+						if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+							dpr = 3;
+						} else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+							dpr = 2;
+						} else {
+							dpr = 1;
+						}
+					} else {
+						// 其他设备下，仍旧使用1倍的方案
+						dpr = 1;
+					}
+					scale = 1 / dpr;
+				}
+				docEl.setAttribute('data-dpr', dpr);
+				if (!metaEl) {
+					metaEl = doc.createElement('meta');
+					metaEl.setAttribute('name', 'viewport');
+					metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+					if (docEl.firstElementChild) {
+						docEl.firstElementChild.appendChild(metaEl);
+					} else {
+						var wrap = doc.createElement('div');
+						wrap.appendChild(metaEl);
+						doc.write(wrap.innerHTML);
+					}
+				}
+				function refreshRem(){
+					var width = docEl.getBoundingClientRect().width;
+					// 设定最大宽度限制，这里等于 设计稿宽度
+					if (width / dpr > 640) {
+						width = 640 * dpr;
+					}
+					// 640 为设计稿宽度，根据设计稿修改
+					var rem = 100 * (width / 640);
+					docEl.style.fontSize = rem + 'px';
+					flexible.rem = win.rem = rem;
+				}
+
+				win.addEventListener('resize', function() {
+					clearTimeout(tid);
+					tid = setTimeout(refreshRem, 100);
+				}, false);
+				win.addEventListener('pageshow', function(e) {
+					if (e.persisted) {
+						clearTimeout(tid);
+						tid = setTimeout(refreshRem, 100);
+					}
+				}, false);
+
+				if (doc.readyState === 'complete') {
+					doc.body.style.fontSize = 12 * dpr + 'px';
+				} else {
+					doc.addEventListener('DOMContentLoaded', function(e) {
+						doc.body.style.fontSize = 12 * dpr + 'px';
+					}, false);
+				}
+				refreshRem();
+				flexible.dpr = win.dpr = dpr;
+				flexible.refreshRem = refreshRem;
+				flexible.rem2px = function(d) {
+					var val = parseFloat(d) * this.rem;
+					if (typeof d === 'string' && d.match(/rem$/)) {
+						val += 'px';
+					}
+					return val;
+				}
+				flexible.px2rem = function(d) {
+					var val = parseFloat(d) / this.rem;
+					if (typeof d === 'string' && d.match(/px$/)) {
+						val += 'rem';
+					}
+					return val;
+				}
+			})(window, window['lib'] || (window['lib'] = {}));
+		</script>
+		<style>
+			/*reset*/
+			body, h1, h2, h3, h4, h5, h6, p,
+			ul, ol, dl, dd, th, td,
+			form, input, button, textarea, pre {
+				margin: 0;
+				padding: 0;
+			}
+			h1, h2, h3, h4, h5, h6, i, em {
+				font-size: inherit;
+				font-weight: normal;
+				font-style: normal;
+			}
+			input, button, textarea, img {
+				display: block;
+				border: none;
+				outline: none;
+			}
+			li {
+				list-style: none;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			/*移动端reset*/
+			body, input, button, textarea {
+				font: 12px/1 Helvetica;
+			}
+			a, button, input, textarea {
+				-webkit-tap-highlight-color: transparent;
+			}
+			input {
+				-webkit-appearance: none;
+			}
+			input[type=checkbox] {
+				-webkit-appearance: checkbox;
+			}
+			input::-webkit-input-speech-button {
+				display: none;
+			}
+			/*reset end*/
+		</style>
+
+		<style>
+			body {width: 6.4rem; margin: 0 auto; margin-top: -.2rem;}
+			div {margin: .6rem;}
+			dl {margin-bottom: .2rem;}
+			p { line-height: .6rem; font-size: .3rem; font-weight: bold;}
+			dt {margin-bottom: .1rem; font-size: .22rem;}
+			dd { width: 1.2rem; text-align: center; border: #f8a624 solid 1px;}
+			[data-dpr= "2"] dd {border-width: 2px;}
+			[data-dpr= "3"] dd {border-width: 3px;}
+
+			.fs_rem dd {font-size: .24rem;}
+			.fs_px dd {font-size: 16px;}
+			[data-dpr= "2"] .fs_px dd,
+			[data-dpr= "2"] .fs_px .bt button {font-size: 32px;}
+			[data-dpr= "3"] .fs_px dd,
+			[data-dpr= "3"] .fs_px .bt button {font-size: 48px;}
+
+			.lh {
+				line-height: .46rem;
+			}
+			.pd {
+				padding: .1rem 0;
+			}
+			.tc {
+				display: table-cell;
+				height: .46rem;
+				vertical-align: middle;
+			}
+			.bt button {
+				width: 100%;
+				height: .46rem;
+				background-color: transparent;
+			}
+			.fs_rem .bt button {
+				font-size: .24rem;
+			}
+			.fs_px .bt button {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="fs_rem">
+			<p>字体为 rem 单位</p>
+			<dl>
+				<dt>line-height 居中方法</dt>
+				<dd class="lh">测试</dd>
+			</dl>
+			<dl>
+				<dt>上下padding 居中方法</dt>
+				<dd class="pd">测试</dd>
+			</dl>
+			<dl>
+				<dt>table-cell 居中方法</dt>
+				<dd class="tc">测试</dd>
+			</dl>
+			<dl>
+				<dt>button 居中方法</dt>
+				<dd class="bt"><button type="button">测试</button></dd>
+			</dl>
+		</div>
+
+		<div class="fs_px">
+			<p>字体为 px 单位</p>
+			<dl>
+				<dt>line-height 居中方法</dt>
+				<dd class="lh">测试</dd>
+			</dl>
+			<dl>
+				<dt>上下padding 居中方法</dt>
+				<dd class="pd">测试</dd>
+			</dl>
+			<dl>
+				<dt>table-cell 居中方法</dt>
+				<dd class="tc">测试</dd>
+			</dl>
+			<dl>
+				<dt>button 居中方法</dt>
+				<dd class="bt"><button type="button">测试</button></dd>
+			</dl>
+		</div>
+	</body>
+</html>

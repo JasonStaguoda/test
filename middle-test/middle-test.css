@@ -139,36 +139,36 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	line-height: .46rem;
 }
 .fs_rem .zoom_rem dd {
-	font-size: .48rem;
+	font-size: .4rem;
 }
 .fs_px .zoom_px dd {
-	font-size: 28px;
+	font-size: 24px;
 }
 [data-dpr= "2"] .fs_px .zoom_px dd {
-	font-size: 56px;
+	font-size: 48px;
 }
 [data-dpr= "3"] .fs_px .zoom_px dd {
-	font-size: 84px;
+	font-size: 72px;
 }
 
 
 .fs_rem dd,
 .fs_rem .bt button {
-	font-size: .28rem;
+	font-size: .2rem;
 }
 .fs_px dd,
 .fs_px .bt button {
-	font-size: 16px;
+	font-size: 12px;
 }
 [data-dpr= "2"] .fs_px dd,
 [data-dpr= "2"] .fs_px .bt button,
 [data-dpr= "2"] .ma_px span {
-	font-size: 32px;
+	font-size: 24px;
 }
 [data-dpr= "3"] .fs_px dd,
 [data-dpr= "3"] .fs_px .bt button,
 [data-dpr= "3"] .ma_px span {
-	font-size: 48px;
+	font-size: 36px;
 }
 
 

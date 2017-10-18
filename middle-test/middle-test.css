@@ -66,6 +66,12 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	color: #FFF;
 	background-color: transparent;
 }
+.fx {
+	height: .46rem;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
 
 .fs_rem dd,
 .fs_rem .bt button {

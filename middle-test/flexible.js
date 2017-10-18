@@ -4,6 +4,7 @@
  * 框架原版 - https://github.com/amfe/lib-flexible
  */
 ;(function(win, lib) {
+	alert("");
 	var doc = win.document;
 	var docEl = doc.documentElement;
 	var metaEl = doc.querySelector('meta[name="viewport"]');

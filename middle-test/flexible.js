@@ -1,4 +1,4 @@
-﻿/*
+/*
  * 来自 阿里手淘弹性布局方案 lib-flexible
  * 更改了换算方式和换算比例：var rem = 100 * (width / 750);
  * 框架原版 - https://github.com/amfe/lib-flexible
@@ -42,7 +42,7 @@
 		var devicePixelRatio = win.devicePixelRatio;
 		if (isIPhone) {
 			// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
-			if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+			if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
 				dpr = 3;
 			} else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
 				dpr = 2;
@@ -79,6 +79,11 @@
 		// 750 为设计稿宽度，根据设计稿修改
 		var rem = 100 * (width / 640);
 		docEl.style.fontSize = rem + 'px';
+		var computedFontSize = parseFloat(win.getComputedStyle(docEl).fontSize);
+		if (rem !== computedFontSize) {
+			rem = +(rem * rem / computedFontSize).toFixed(4);
+			docEl.style.fontSize = rem + 'px';
+		}
 		flexible.rem = win.rem = rem;
 	}
 

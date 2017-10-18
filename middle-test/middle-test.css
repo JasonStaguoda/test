@@ -120,16 +120,16 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	transform-origin: 0 0; /*transform默认居中缩放，改变缩放原点*/
 }
 .fs_rem .transform_rem dd span {
-	font-size: .48rem;
+	font-size: .56rem;
 }
 .fs_px .transform_px dd span {
-	font-size: 28px;
+	font-size: 32px;
 }
 [data-dpr= "2"] .fs_px .transform_px dd span {
-	font-size: 56px;
+	font-size: 64px;
 }
 [data-dpr= "3"] .fs_px .transform_px dd span {
-	font-size: 84px;
+	font-size: 96px;
 }
 
 .zoom_rem dd,

@@ -116,8 +116,39 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	display: block;
 	width: 3rem;
 	line-height: .92rem;
-	transform: scale(.5);
-	transform-origin: 0 0;
+	transform: scale(.5);  /*transform缩放，不改变元素本来占据的空间大小，所以这里对嵌套的层进行缩放*/
+	transform-origin: 0 0; /*transform默认居中缩放，改变缩放原点*/
+}
+.fs_rem .transform_rem dd span {
+	font-size: .48rem;
+}
+.fs_px .transform_px dd span {
+	font-size: 28px;
+}
+[data-dpr= "2"] .fs_px .transform_px dd span {
+	font-size: 56px;
+}
+[data-dpr= "3"] .fs_px .transform_px dd span {
+	font-size: 84px;
+}
+
+.zoom_rem dd,
+.zoom_px dd {
+	/*相对于左上角缩放，并且改变元素占据空间*/
+	zoom: 0.5;  /*宽高只对px单位生效，这里只缩放了文本*/
+	line-height: .46rem;
+}
+.fs_rem .zoom_rem dd {
+	font-size: .48rem;
+}
+.fs_px .zoom_px dd {
+	font-size: 28px;
+}
+[data-dpr= "2"] .fs_px .zoom_px dd {
+	font-size: 56px;
+}
+[data-dpr= "3"] .fs_px .zoom_px dd {
+	font-size: 84px;
 }
 
 
@@ -139,16 +170,5 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 [data-dpr= "3"] .ma_px span {
 	font-size: 42px;
 }
-.transform_rem dd span {
-	font-size: .48rem;
-}
-.transform_px dd span {
-	font-size: 28px;
-}
-[data-dpr= "2"] .transform_px dd span {
-	font-size: 56px;
-}
-[data-dpr= "3"] .transform_px dd span {
-	font-size: 84px;
-}
+
 

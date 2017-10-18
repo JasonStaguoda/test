@@ -45,7 +45,7 @@ div {margin: .6rem;}
 dl {margin-bottom: .2rem;}
 p {line-height: .6rem; font-size: .3rem; font-weight: bold;}
 dt {margin-bottom: .1rem; font-size: .22rem;}
-dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px;}
+dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; background-color: #f8a624;}
 [data-dpr= "2"] dd {border-width: 2px;}
 [data-dpr= "3"] dd {border-width: 3px;}
 

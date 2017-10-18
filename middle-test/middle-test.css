@@ -65,7 +65,7 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 
 .bt button {
 	width: 100%;
-	height: .46rem;
+	line-height: .46rem;
 	color: #FFF;
 	background-color: transparent;
 }
@@ -114,22 +114,22 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 .transform_rem dd span,
 .transform_px dd span {
 	display: block;
-	width: 3rem;
-	line-height: .92rem;
-	transform: scale(.5);  /*transform缩放，不改变元素本来占据的空间大小，所以这里对嵌套的层进行缩放*/
+	width: 6rem;
+	line-height: 1.84rem;
+	transform: scale(.25);  /*transform缩放，不改变元素本来占据的空间大小，所以这里对嵌套的层进行缩放*/
 	transform-origin: 0 0; /*transform默认居中缩放，改变缩放原点*/
 }
 .fs_rem .transform_rem dd span {
-	font-size: .48rem;
+	font-size: .96rem;
 }
 .fs_px .transform_px dd span {
-	font-size: 28px;
-}
-[data-dpr= "2"] .fs_px .transform_px dd span {
 	font-size: 56px;
 }
+[data-dpr= "2"] .fs_px .transform_px dd span {
+	font-size: 112px;
+}
 [data-dpr= "3"] .fs_px .transform_px dd span {
-	font-size: 84px;
+	font-size: 168px;
 }
 
 .zoom_rem dd,

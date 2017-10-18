@@ -52,25 +52,59 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 .lh {
 	line-height: .46rem;
 }
+
 .pd {
 	padding: .1rem 0;
 }
+
 .tc {
 	display: table-cell;
 	height: .46rem;
 	vertical-align: middle;
 }
+
 .bt button {
 	width: 100%;
 	height: .46rem;
 	color: #FFF;
 	background-color: transparent;
 }
+
 .fx {
 	height: .46rem;
 	display: flex;
 	justify-content:center;
 	align-items:center;
+}
+
+.ma_rem,
+.ma_px {
+	position: relative;
+	height: .46rem;
+}
+.ma_rem span {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: .24rem;
+}
+.ma_px span {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 14px;
+}
+[data-dpr= "2"] .ma_px span {
+	height: 28px;
+}
+[data-dpr= "3"] .ma_px span {
+	height: 42px;
 }
 
 .fs_rem dd,
@@ -82,19 +116,15 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	font-size: 14px;
 }
 [data-dpr= "2"] .fs_px dd,
-[data-dpr= "2"] .fs_px .bt button {
+[data-dpr= "2"] .fs_px .bt button,
+[data-dpr= "2"] .ma_px span {
 	font-size: 28px;
 }
 [data-dpr= "3"] .fs_px dd,
-[data-dpr= "3"] .fs_px .bt button {
+[data-dpr= "3"] .fs_px .bt button,
+[data-dpr= "3"] .ma_px span {
 	font-size: 42px;
 }
-
-
-
-
-
-
 
 
 

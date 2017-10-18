@@ -107,6 +107,20 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	height: 42px;
 }
 
+.transform_rem dd,
+.transform_px dd {
+	height: .46rem;
+}
+.transform_rem dd span,
+.transform_px dd span {
+	display: block;
+	width: 3rem;
+	line-height: .92rem;
+	transform: scale(.5);
+	transform-origin: 0 0;
+}
+
+
 .fs_rem dd,
 .fs_rem .bt button {
 	font-size: .24rem;
@@ -125,6 +139,16 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 [data-dpr= "3"] .ma_px span {
 	font-size: 42px;
 }
-
-
+.transform_rem dd span {
+	font-size: .48rem;
+}
+.transform_px dd span {
+	font-size: 28px;
+}
+[data-dpr= "2"] .transform_px dd span {
+	font-size: 56px;
+}
+[data-dpr= "3"] .transform_px dd span {
+	font-size: 84px;
+}
 

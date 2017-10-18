@@ -4,7 +4,6 @@
  * 框架原版 - https://github.com/amfe/lib-flexible
  */
 ;(function(win, lib) {
-	alert("");
 	var doc = win.document;
 	var docEl = doc.documentElement;
 	var metaEl = doc.querySelector('meta[name="viewport"]');
@@ -80,11 +79,6 @@
 		// 750 为设计稿宽度，根据设计稿修改
 		var rem = 100 * (width / 640);
 		docEl.style.fontSize = rem + 'px';
-		var computedFontSize = parseFloat(win.getComputedStyle(docEl).fontSize);
-		if (rem !== computedFontSize) {
-			rem = +(rem * rem / computedFontSize).toFixed(4);
-			docEl.style.fontSize = rem + 'px';
-		}
 		flexible.rem = win.rem = rem;
 	}
 

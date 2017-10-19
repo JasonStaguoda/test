@@ -535,7 +535,7 @@ body {
 	width: 4.6rem;
 	height: .64rem;
 	font-size: 14px;
-	line-height: .64rem;
+	line-height: .66rem;
 	color: #1f2021;
 	background-color: #FFF;
 	border-top-left-radius: .05rem;
@@ -632,7 +632,7 @@ body {
 	float: left;
 	margin: .12rem .16rem 0 0;
 	padding: 0 .08rem;
-	line-height: .3rem;
+	line-height: .31rem;
 	font-size: 12px;
 	color: #8092ad;
 	background-color: transparent;
@@ -1100,7 +1100,7 @@ body {
 .ranking_first3_switch a {
 	float: left;
 	width: 1.5rem;
-	line-height: .46rem;
+	line-height: .48rem;
 	font-size: .24rem;
 	text-align: center;
 	color: #f8a624;

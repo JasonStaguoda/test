@@ -89,7 +89,7 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	left: 0;
 	right: 0;
 	margin: auto;
-	height: .24rem;
+	height: .23rem;
 }
 .ma_px span {
 	position: absolute;
@@ -98,13 +98,13 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	left: 0;
 	right: 0;
 	margin: auto;
-	height: 14px;
+	height: 13px;
 }
 [data-dpr= "2"] .ma_px span {
-	height: 28px;
+	height: 26px;
 }
 [data-dpr= "3"] .ma_px span {
-	height: 42px;
+	height: 39px;
 }
 
 .transform_rem dd,
@@ -120,16 +120,16 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	transform-origin: 0 0; /*transform默认居中缩放，改变缩放原点*/
 }
 .fs_rem .transform_rem dd span {
-	font-size: .4rem;
+	font-size: .46rem;
 }
 .fs_px .transform_px dd span {
-	font-size: 24px;
+	font-size: 28px;
 }
 [data-dpr= "2"] .fs_px .transform_px dd span {
-	font-size: 48px;
+	font-size: 56px;
 }
 [data-dpr= "3"] .fs_px .transform_px dd span {
-	font-size: 72px;
+	font-size: 84px;
 }
 
 .zoom_rem dd,
@@ -139,36 +139,36 @@ dd { width: 1.5rem; text-align: center; color: #FFF; border: #f8a624 solid 1px; 
 	line-height: .46rem;
 }
 .fs_rem .zoom_rem dd {
-	font-size: .4rem;
+	font-size: .46rem;
 }
 .fs_px .zoom_px dd {
-	font-size: 24px;
+	font-size: 28px;
 }
 [data-dpr= "2"] .fs_px .zoom_px dd {
-	font-size: 48px;
+	font-size: 56px;
 }
 [data-dpr= "3"] .fs_px .zoom_px dd {
-	font-size: 72px;
+	font-size: 84px;
 }
 
 
 .fs_rem dd,
 .fs_rem .bt button {
-	font-size: .2rem;
+	font-size: .23rem;
 }
 .fs_px dd,
 .fs_px .bt button {
-	font-size: 12px;
+	font-size: 14px;
 }
 [data-dpr= "2"] .fs_px dd,
 [data-dpr= "2"] .fs_px .bt button,
 [data-dpr= "2"] .ma_px span {
-	font-size: 24px;
+	font-size: 28px;
 }
 [data-dpr= "3"] .fs_px dd,
 [data-dpr= "3"] .fs_px .bt button,
 [data-dpr= "3"] .ma_px span {
-	font-size: 36px;
+	font-size: 42px;
 }
 
 

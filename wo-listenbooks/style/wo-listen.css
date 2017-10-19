@@ -182,6 +182,7 @@ input::-webkit-input-speech-button {
 	max-height: 100%;
 	width: 5rem;
 	font-size: 14px;
+	height: .3rem;
 	line-height: .3rem;
 	color: #808080;
 }
@@ -309,6 +310,29 @@ input::-webkit-input-speech-button {
 	left: 0;
 	right: 0;
 	background-color: transparent;
+}
+.tab {
+	width: 100%;
+}
+.tab .more {
+	font-size: .22rem;
+	line-height: .6rem;
+	text-align: center;
+	letter-spacing: .01rem;
+	text-indent: -.4rem;
+	color: #4c4c4c;
+	background-color: #F1F2F3;
+}
+.tab .more a {
+	display: block;
+}
+.more_arr {
+	position: absolute;
+	margin: .22rem 0 0 .56rem;
+	width: 0;
+	height: 0;
+	border: solid .12rem;
+	border-color: #f8a624 transparent transparent transparent;
 }
 /*可重用组件 end*/
 
@@ -608,15 +632,13 @@ body {
 .details_cont_info_label em {
 	float: left;
 	margin: .12rem .16rem 0 0;
-	border: #8092ad solid 1px;
-	border-radius: .04rem;
-}
-.details_cont_info_label em button {
 	padding: 0 .08rem;
-	height: .3rem;
+	line-height: .3rem;
 	font-size: 12px;
 	color: #8092ad;
 	background-color: transparent;
+	border: #8092ad solid 1px;
+	border-radius: .04rem;
 }
 .details_operating_wrap {
 	padding: .3rem 0;
@@ -629,21 +651,19 @@ body {
 .details_operating_item {
 	float: left;
 	margin-right: .2rem;
+	width: 1.77rem;
+	line-height: .5rem;
+	font-size: .24rem;
+	text-align: center;
+	color: #bf955e;
 	border: #bf955e solid 1px;
 	border-radius: .06rem;
-}
-.details_operating_item button {
-	width: 1.77rem;
-	height: .5rem;
-	font-size: .24rem;
-	color: #bf955e;
-	background-color: transparent;
 }
 .strat_listen {
 	background-color: #f8a624;
 	border-color: transparent;
 }
-.strat_listen button {
+.strat_listen {
 	color: #FFF;
 }
 .details_operating_item a {
@@ -995,19 +1015,19 @@ body {
 	line-height: .54rem;
 	font-size: 16px;
 }
-.classification_module dl dt span,
-.classification_module dl dd span {
+.classification_module dl dt a,
+.classification_module dl dd a {
 	display: block;
 }
-.classification_module dl dt span {
+.classification_module dl dt a {
 	padding: 0 .2rem 0 .5rem;
 	color: #f8a624;
 }
-.classification_module dl dd span {
+.classification_module dl dd a {
 	padding: 0 .2rem;
 	color: #4d4d4d;
 }
-.classification_module_all dt span i {
+.classification_module_all dt a i {
 	position: absolute;
 	margin: .15rem 0 0 -.3rem;
 	width: .2rem;
@@ -1015,7 +1035,7 @@ body {
 	background: url(icons/classification_module_all.png) no-repeat;
 	background-size: contain;
 }
-.classification_module_history dt span i {
+.classification_module_history dt a i {
 	position: absolute;
 	margin: .16rem 0 0 -.3rem;
 	width: .22rem;
@@ -1080,14 +1100,12 @@ body {
 }
 .ranking_first3_switch a {
 	float: left;
-	border-right: #f8a624 solid 1px;
-}
-.ranking_first3_switch a button {
 	width: 1.5rem;
-	height: .46rem;
+	line-height: .46rem;
 	font-size: .24rem;
+	text-align: center;
 	color: #f8a624;
-	background-color: transparent;
+	border-right: #f8a624 solid 1px;
 }
 .ranking_first3_switch_week {
 	border-top-left-radius: .05rem;
@@ -1099,8 +1117,6 @@ body {
 }
 .ranking_first3_switch .active {
 	font-weight: bold;
-}
-.ranking_first3_switch .active button {
 	color: #FFF;
 	background-color: #f8a624;
 }
@@ -1406,14 +1422,14 @@ body {
 }
 [data-dpr= "2"] .details_cont_info_detailed strong,
 [data-dpr= "2"] .details_cont_info_detailed i,
-[data-dpr= "2"] .details_cont_info_label em button,
+[data-dpr= "2"] .details_cont_info_label em,
 [data-dpr= "2"] .play_controls_progress_time,
 [data-dpr= "2"] .search_module_cont_search_tit span {
 	font-size: 24px;
 }
 [data-dpr= "3"] .details_cont_info_detailed strong,
 [data-dpr= "3"] .details_cont_info_detailed i,
-[data-dpr= "3"] .details_cont_info_label em button,
+[data-dpr= "3"] .details_cont_info_label em,
 [data-dpr= "3"] .play_controls_progress_time,
 [data-dpr= "3"] .search_module_cont_search_tit span {
 	font-size: 36px;
@@ -1454,7 +1470,7 @@ body {
 	}
 	.details_cont_info_detailed strong,
 	.details_cont_info_detailed i,
-	.details_cont_info_label em button,
+	.details_cont_info_label em,
 	.play_controls_progress_time,
 	.search_module_cont_search_tit span {
 		font-size: 13px;

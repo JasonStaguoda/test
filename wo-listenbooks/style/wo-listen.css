@@ -632,7 +632,7 @@ body {
 	float: left;
 	margin: .12rem .16rem 0 0;
 	padding: 0 .08rem;
-	line-height: .31rem;
+	line-height: .315rem;
 	font-size: 12px;
 	color: #8092ad;
 	background-color: transparent;
@@ -1101,7 +1101,7 @@ body {
 	float: left;
 	width: 1.5rem;
 	line-height: .48rem;
-	font-size: .24rem;
+	font-size: .26rem;
 	text-align: center;
 	color: #f8a624;
 	border-right: #f8a624 solid 1px;

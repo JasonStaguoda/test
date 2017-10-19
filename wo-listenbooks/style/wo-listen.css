@@ -576,17 +576,16 @@ body {
 .search_module_cont_search_label a {
 	float: left;
 	margin: 0 .1rem .14rem 0;
-}
-.search_module_cont_search_label a button {
 	padding: 0 .22rem;
 	font-size: 14px;
-	height: .48rem;
+	line-height: .48rem;
 	letter-spacing: .01rem;
 	color: #4d4d4d;
 	background-color: #FFF;
 	border-radius: .05rem;
 }
-.search_module_cont_search_label .special button {
+
+.search_module_cont_search_label .special {
 	color: #fe5a5a;
 }
 /*搜索模块 end*/
@@ -1400,7 +1399,7 @@ body {
 [data-dpr= "2"] .ranking_first3_shows_2 p,
 [data-dpr= "2"] .ranking_first3_shows_3 p,
 [data-dpr= "2"] .search_module_cont_search_box input,
-[data-dpr= "2"] .search_module_cont_search_label a button,
+[data-dpr= "2"] .search_module_cont_search_label a,
 [data-dpr= "2"] .play_popup_send_input {
 	font-size: 28px;
 }
@@ -1416,7 +1415,7 @@ body {
 [data-dpr= "3"] .ranking_first3_shows_2 p,
 [data-dpr= "3"] .ranking_first3_shows_3 p,
 [data-dpr= "3"] .search_module_cont_search_box input,
-[data-dpr= "3"] .search_module_cont_search_label a button,
+[data-dpr= "3"] .search_module_cont_search_label a,
 [data-dpr= "3"] .play_popup_send_input {
 	font-size: 42px;
 }
@@ -1464,7 +1463,7 @@ body {
 	.ranking_first3_shows_2 p,
 	.ranking_first3_shows_3 p,
 	.search_module_cont_search_box input,
-	.search_module_cont_search_label a button,
+	.search_module_cont_search_label a,
 	.play_popup_send_input {
 		font-size: 15px;
 	}

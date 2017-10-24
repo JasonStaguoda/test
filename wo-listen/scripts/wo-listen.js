@@ -278,6 +278,26 @@ function classificationModuleFixed() {  // 分类页面 选择分类的模块自
 	}
 }
 
+addLoadEvent(classificationTab);
+function classificationTab() {  // 分类页面，关键词点击切换
+	var all = document.getElementById("classification_module_all");
+	var history = document.getElementById("classification_module_history");
+	if (!all || !history) return;
+	classificationTabAction(all);
+	classificationTabAction(history);
+}
+function classificationTabAction(element) {
+	var element_items = element.getElementsByTagName("li");
+	for (var i=0; i<element_items.length; i++) {
+		element_items[i].onclick = function() {
+			for (var i=0; i<element_items.length; i++) {
+				delClass(element_items[i], "checked");
+			}
+			addClass(this, "checked");
+		}
+	}
+}
+
 addLoadEvent(autoRanking);
 function autoRanking() {  // 排行页，第4名开始自动生成序号
 	var list = document.getElementById("ranking_book_exhibition");

@@ -1319,9 +1319,9 @@ body {
 }
 .themein_banner_int {
 	margin: 0 .2rem;
-	padding-top: .3rem;
 }
 .themein_banner_int_tit {
+	padding-top: .3rem;
 	font-size: 18px;
 	font-weight: bold;
 	color: #1f2021;

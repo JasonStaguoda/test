@@ -41,6 +41,9 @@ input::-webkit-input-speech-button {
 	display: none;
 }
 /*reset end*/
+
+
+/*可重用组件*/
 .clearfix {
 	*zoom: 1;
 }
@@ -49,9 +52,6 @@ input::-webkit-input-speech-button {
 	display: table;
 	clear: both;
 }
-
-
-/*可重用组件*/
 .page_bg {
 	width: 100%;
 	background-color: #f1f2f3;
@@ -640,6 +640,7 @@ body {
 	background-color: #FFF;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 .search_module_result::-webkit-scrollbar {
 	display: none;
@@ -1014,6 +1015,7 @@ body {
 	background-color: #FFF;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 @keyframes popupListShow {
 	to {bottom: 0;}
@@ -1232,7 +1234,6 @@ body {
     padding-top: .2rem;
 	width: 1.74rem;
 }
-
 .ranking_first3_shows a:nth-child(1) .book_int_hot{
     margin-left: .19rem;
 	background-color: #98afc1;
@@ -1548,11 +1549,6 @@ body {
 	display: block;
 }
 /*登陆和注册页相关 end*/
-
-
-
-
-
 
 
 /*不同dpr下字体大小处理*/

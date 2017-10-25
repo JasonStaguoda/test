@@ -63,36 +63,31 @@ function recommendPageSearchMogule() {  // 推荐页面搜索模块相关
 	var primer = document.getElementById("recommend_search");
 	if (!primer) return;
 	var recommend = document.getElementById("recommend");
-	var search_bg = document.getElementById("search_module_bg");
 	var search = document.getElementById("search_module");
 	var search_input = document.getElementById("search_module_cont_input");
+	var search_close = document.getElementById("search_module_closeholder");
 	var back = document.getElementById("search_header_back");
-	var unfind = document.getElementById("search_module_unfind");
-	var result = document.getElementById("search_module_result");
 	var result_close = document.getElementById("search_module_result_closeholder");
 
 	primer.onclick = function() {
-		addClass(search_bg, "search_module_bg_show");
 		addClass(search, "search_module_show");
 		addClass(recommend, "recommend_hide");
 		search_input.focus();
 	}
 	back.onclick = function() {
-		delClass(search_bg, "search_module_bg_show");
 		delClass(search, "search_module_show");
-		delClass(unfind, "search_module_unfind_show");
-		delClass(result, "search_module_result_show");
+		delClass(search, "search_module_result_show");
+		delClass(search, "search_module_unfind_show");
 		delClass(recommend, "recommend_hide");
 	}
-	search_bg.onclick = function() {
-		delClass(search_bg, "search_module_bg_show");
+	search_close.onclick = function() {
 		delClass(search, "search_module_show");
-		delClass(unfind, "search_module_unfind_show");
-		delClass(result, "search_module_result_show");
+		delClass(search, "search_module_result_show");
+		delClass(search, "search_module_unfind_show");
 		delClass(recommend, "recommend_hide");
 	}
 	result_close.onclick = function() {
-		delClass(result, "search_module_result_show");
+		delClass(search, "search_module_result_show");
 	}
 }
 

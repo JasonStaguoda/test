@@ -1,3 +1,4 @@
+document.body.addEventListener('touchstart', function () { });
 // 页面加载完毕后立即执行某函数
 function addLoadEvent(func) {
 	var oldonload = window.onload;

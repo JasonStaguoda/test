@@ -53,8 +53,8 @@ dt {
 }
 dd {
 	width: 2rem;
-	height: 0;
-	border: red solid;
+	height: .1rem;
+	border-bottom: red solid;
 }
 
 .rem01 dd {

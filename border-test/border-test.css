@@ -40,9 +40,10 @@ input::-webkit-input-speech-button {
 
 
 p {
-	margin-bottom: .36rem;
+	margin-bottom: .22rem;
 	font-size: .3rem;
 	font-weight: bold;
+	line-height: 2;
 }
 dl {
 	margin-bottom: .36rem;
@@ -64,6 +65,12 @@ dd {
 }
 .rem03 dd {
 	border-width: .03rem;
+}
+.rem04 dd {
+	border-width: .04rem;
+}
+.rem05 dd {
+	border-width: .05rem;
 }
 
 .px01-dpr dd,

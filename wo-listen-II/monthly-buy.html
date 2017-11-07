@@ -26,9 +26,23 @@
 		<div class="monthly_buy container20">
 			<p class="monthly_buy_info">本作品从第四集开始收费。开通包月15元/月，即可免费畅听评书相声、热门小说分类下所有有声内容，名家名段、网络流行。</p>
 			<p class="monthly_buy_method">编辑短信<span>BY15</span>到<span>10655562</span>订购</p>
-			<a href="sms:10655562?body=BY15" class="monthly_buy_button">点击直接发送短信</a>
+			<a id="monthly_buy_button" href="" class="monthly_buy_button">点击直接发送短信</a>
 			<p class="monthly_buy_tip">部分手机不支持</p>
 		</div>
 		<script src="scripts/wo-listen.js"></script>
+		<script>
+			addLoadEvent(sendSms);
+			function sendSms() {
+				var u = navigator.userAgent;
+				var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+				var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+				var button = document.getElementById("monthly_buy_button");
+				if (isiOS) {
+					button.setAttribute("href", "sms:10655562&body=BY15");
+				} else {
+					button.setAttribute("href", "sms:10655562?body=BY15");
+				}
+			}
+		</script>
 	</body>
 </html>

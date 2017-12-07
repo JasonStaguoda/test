@@ -1,0 +1,347 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<meta name= "robots" content= "all">
+		<meta name= "keywords" content= "我们都是朗读者,朗读大赛">
+		<meta name= "description" content= "“我们都是朗读者”朗读大赛报名入口页面">
+		<meta name= "author" content= "F">
+		<meta name= "copyright" content= "">
+		<!-- 移动端meta声明标签 -->
+		<meta name= "format-detection" content= "telphone=no, email=no">
+		<meta http-equiv= "Cache-Control" content= "no-transform">
+		<meta name= "apple-touch-fullscreen" content= "yes">
+		<meta name= "apple-mobile-web-app-capable" content= "yes">
+		<meta name= "apple-mobile-web-app-status-bar-style" content= "black-translucent">
+		<title>大赛报名</title>
+		<script src="js/flexible.js"></script>
+		<link rel= "stylesheet" href= "css/reading-contest.css">
+		<link rel= "shortcut icon" type= "image/x-icon" href= "">
+	</head>
+
+	<body>
+		<div id="enter" class="enter">
+			<div class="enter-banner">
+				<p>海选时间：11.18 - 11.22</p>
+				<img src="images/banner.png" alt="">
+			</div>
+
+			<form class="enter-form" action="#" method="post">
+				<div id="enter_form_avatar" class="enter-form-avatar">
+					<img src="images/avatar.jpg" alt="">
+				</div>
+				<input id="name_input" class="enter-form-input-l" type="text" placeholder="请输入姓名" maxlength="20" required>
+				<input id="tel_input" class="enter-form-input-l" type="tel" placeholder="请输入手机号" maxlength="11" required>
+				<div class="enter-form-input_wrap clearfix">
+					<div id="age_show" class="enter-form-input-agehd"><i></i><span></span>岁</div>
+					<input id="age_input" class="enter-form-input-s" type="tel" placeholder="请输入年龄" maxlength="2" required>
+					<div id="area_show" class="enter-form-input-areahd"><i></i><span></span></div>
+					<input id="select_area_input" class="enter-form-input-s" type="text" placeholder="选择所在地区" required>
+				</div>
+				<button id="enter_form_button" class="enter-form-button" type="button">请录制一段60秒内的音频</button>
+				<button id="enter_form_submit" class="enter-form-button enter-form-submit" type="submit">提交报名</button>
+				<p id="enter_form_error" class="enter-form-error">我是错误信息！</p>
+			</form>
+			<div class="enter-hd"></div>
+		</div>
+
+		<!-- 添加头像 -->
+		<div id="select_avatar" class="pop-ups select-avatar">
+			<div class="pop-ups-holder"></div>
+			<div class="pop-ups-cont">
+				<div class="select-avatar-cont">
+					<div class="select-avatar-choose clearfix">
+						<p class="select-avatar-choose-photo">
+							<i></i>
+							<span>拍照</span>
+						</p>
+						<p class="select-avatar-choose-picture">
+							<i></i>
+							<span>相册</span>
+						</p>
+					</div>
+					<button id="select_avatar_cancel" class="select-avatar-cancel" type="button">取消</button>
+				</div>
+			</div>
+		</div>
+		<!-- END -->
+		<!-- 作品替换 -->
+		<div id="works_replace" class="pop-ups works-replace" style="display: none;">
+			<div class="pop-ups-holder"></div>
+			<div class="pop-ups-cont">
+				<div class="works-replace-cont">
+					<p>您已有海选作品，是否替换当前作品？</p>
+					<div class="replace-cont-but clearfix">
+						<button id="no_replace" class="replace-cont-but-n" type="button">否</button>
+						<button id="yes_replace" class="replace-cont-but-y" type="button">是</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END -->
+		<!-- 录音发布失败 -->
+		<div id="record_failure" class="pop-ups record-failure" style="display: none;">
+			<div class="pop-ups-holder"></div>
+			<div class="pop-ups-cont">
+				<div class="record-failure-cont">
+					<i></i>
+					<p>录音发布失败，请重新录制</p>
+					<button id="record_failure_button" type="button">确定</button>
+				</div>
+			</div>
+		</div>
+		<!-- END -->
+		<!-- 报名成功 -->
+		<div id="enter_success" class="pop-ups enter-success" style="display: none;">
+			<div class="pop-ups-holder"></div>
+			<div class="pop-ups-cont">
+				<div class="enter-success-cont">
+					<i></i>
+					<p>报名成功</p>
+					<button id="enter_success_button" type="button">确定</button>
+				</div>
+			</div>
+		</div>
+		<!-- END -->
+
+		<!-- 录音 -->
+		<!-- 添加 no-record 类名，未录音状态 -->
+		<!-- 添加 now-record 类名，正在录音状态 -->
+		<!-- 添加 already-record 类名，录音完成状态 -->
+		<!-- 添加 play-record 类名，播放录音状态 -->
+		<!-- 添加 goon-record 类名，暂停播放状态 -->
+		<!-- 添加 end-record 类名，播放结束状态 -->
+		<div id="record" class="pop-ups record no-record">
+			<div class="pop-ups-cont">
+				<div class="record-cont">
+					<p id="record_cont_time" class="record-cont-time"><span>0</span>&nbsp;s</p>
+					<div class="record-cont-middle">
+						<div id="record_start" class="cont-middle-start">
+							<p>开始录制</p>
+							<i></i>
+						</div>
+						<div id="record_stop" class="cont-middle-stop">
+							<span id="record_schedule_sixty" class="record-schedule"><em></em></span>
+							<p>结束录制</p>
+							<i></i>
+						</div>
+						<div class="cont-middle-already">
+							<span class="record-schedule"><em></em></span>
+							<p>已结束</p>
+							<i></i>
+						</div>
+						<div id="record_stop_play" class="cont-middle-out">
+							<span id="record_schedule_file" class="record-schedule"><em></em></span>
+							<p>暂停播放</p>
+							<i></i>
+						</div>
+						<div id="record_goon" class="cont-middle-goon">
+							<span id="record_schedule_file2" class="record-schedule"><em></em></span>
+							<p>继续播放</p>
+							<i></i>
+						</div>
+						<div id="record_end" class="cont-middle-end">
+							<span class="record-schedule"><em></em></span>
+							<p>播放结束</p>
+							<i></i>
+						</div>
+					</div>
+					<div class="record-cont-three">
+						<div class="cont-three-not clearfix">
+							<div class="cont-three-not-re">
+								<i></i>
+								<p>重录</p>
+							</div>
+							<div class="cont-three-not-try">
+								<i></i>
+								<p>试听</p>
+							</div>
+							<div class="cont-three-not-finish">
+								<i></i>
+								<p>完成</p>
+							</div>
+						</div>
+						<div class="cont-three-yep clearfix">
+							<div id="record_yep_re" class="cont-three-yep-re">
+								<i></i>
+								<p>重录</p>
+							</div>
+							<div id="record_yep_try" class="cont-three-yep-try">
+								<i></i>
+								<p>试听</p>
+							</div>
+							<div class="cont-three-yep-try-play">
+								<i></i>
+								<p>试听</p>
+							</div>
+							<div id="record_yep_carry" class="cont-three-yep-finish">
+								<i></i>
+								<p>完成</p>
+							</div>
+						</div>
+					</div>
+					<button id="record_cont_cancel" class="record-cont-cancel" type="button">取消</button>
+				</div>
+			</div>
+		</div>
+		<!-- END -->
+
+		<!-- 选择地区 -->
+		<div id="select_area" class="pop-ups select-area">
+			<div class="pop-ups-holder"></div>
+			<div class="pop-ups-cont">
+				<button id="select_area_cancel" class="select-area-cancel" type="button">取消选择</button>
+				<p class="select-area-tit">选择城市</p>
+				<ul id="select_area_city" class="select-area-city clearfix">
+					<li class="select-area-city-item selected">
+						<span>杭州</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">上城区</li>
+							<li class="county-item">下城区</li>
+							<li class="county-item">江干区</li>
+							<li class="county-item">拱墅区</li>
+							<li class="county-item">西湖区</li>
+							<li class="county-item">滨江区</li>
+							<li class="county-item">余杭区</li>
+							<li class="county-item">萧山区</li>
+							<li class="county-item">富阳区</li>
+							<li class="county-item">临安区</li>
+							<li class="county-item">建德市</li>
+							<li class="county-item">桐庐县</li>
+							<li class="county-item">淳安县</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>温州</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">鹿城区</li>
+							<li class="county-item">龙湾区</li>
+							<li class="county-item">瓯海区</li>
+							<li class="county-item">洞头区</li>
+							<li class="county-item">瑞安市</li>
+							<li class="county-item">乐清市</li>
+							<li class="county-item">永嘉县</li>
+							<li class="county-item">平阳县</li>
+							<li class="county-item">苍南县</li>
+							<li class="county-item">文成县</li>
+							<li class="county-item">泰顺县</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>宁波</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">海曙区</li>
+							<li class="county-item">江北区</li>
+							<li class="county-item">北仑区</li>
+							<li class="county-item">镇海区</li>
+							<li class="county-item">鄞州区</li>
+							<li class="county-item">奉化区</li>
+							<li class="county-item">余姚市</li>
+							<li class="county-item">慈溪市</li>
+							<li class="county-item">象山县</li>
+							<li class="county-item">宁海县</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>绍兴</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">越城区</li>
+							<li class="county-item">柯桥区</li>
+							<li class="county-item">上虞区</li>
+							<li class="county-item">新昌县</li>
+							<li class="county-item">嵊州市</li>
+							<li class="county-item">诸暨市</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>湖州</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">吴兴区</li>
+							<li class="county-item">南浔区</li>
+							<li class="county-item">德清县</li>
+							<li class="county-item">长兴县</li>
+							<li class="county-item">安吉县</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>嘉兴</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">南湖区</li>
+							<li class="county-item">秀洲区</li>
+							<li class="county-item">嘉善县</li>
+							<li class="county-item">海盐县</li>
+							<li class="county-item">海宁市</li>
+							<li class="county-item">平湖市</li>
+							<li class="county-item">桐乡市</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>金华</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">婺城区</li>
+							<li class="county-item">金东区</li>
+							<li class="county-item">兰溪市</li>
+							<li class="county-item">义乌市</li>
+							<li class="county-item">东阳市</li>
+							<li class="county-item">永康市</li>
+							<li class="county-item">浦江县</li>
+							<li class="county-item">武义县</li>
+							<li class="county-item">磐安县</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>衢州</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">柯城区</li>
+							<li class="county-item">衢江区</li>
+							<li class="county-item">龙游县</li>
+							<li class="county-item">江山市</li>
+							<li class="county-item">常山县</li>
+							<li class="county-item">开化县</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>台州</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">椒江区</li>
+							<li class="county-item">黄岩区</li>
+							<li class="county-item">路桥区</li>
+							<li class="county-item">临海市</li>
+							<li class="county-item">温岭市</li>
+							<li class="county-item">玉环市</li>
+							<li class="county-item">天台县</li>
+							<li class="county-item">仙居县</li>
+							<li class="county-item">三门县</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>丽水</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">莲都区</li>
+							<li class="county-item">龙泉市</li>
+							<li class="county-item">青田县</li>
+							<li class="county-item">景宁县</li>
+							<li class="county-item">庆元县</li>
+							<li class="county-item">缙云县</li>
+							<li class="county-item">遂昌县</li>
+							<li class="county-item">松阳县</li>
+						</ol>
+					</li>
+					<li class="select-area-city-item">
+						<span>舟山</span>
+						<ol class="select-area-city-county">
+							<li class="county-item">定海区</li>
+							<li class="county-item">普陀区</li>
+							<li class="county-item">岱山县</li>
+							<li class="county-item">嵊泗县</li>
+						</ol>
+					</li>
+				</ul>
+				<p class="select-area-tit">选择区/县</p>
+			</div>
+		</div>
+		<!-- END -->
+		<script src="js/reading-contest.js"></script>
+	</body>
+</html>

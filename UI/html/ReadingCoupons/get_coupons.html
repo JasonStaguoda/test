@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+	<script src="../../plugIn/libflexible/flexible_css.debug.js"></script>
+	<script src="../../plugIn/libflexible/flexible.debug.js"></script>
+	<script src="../../plugIn/libflexible/makegrid.debug.js"></script>
+	<title>获取兑换卷</title>
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/coupons.css">
+    
+</head>
+<body>
+	<header class="common_detail box clear ">
+		<a class="back" href="read_detail.html" title="">
+			<img src="../../img/backblack.png" alt="">
+		</a>
+		<p>领取阅读劵</p>
+		<div class=" fr box">
+			<a href="#"><img src="../../img/house.png" alt=""></a>
+			<a href="#"><img src="../../img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+
+		
+	<div class="coupons_get box">
+		<p class="title">您的可用阅读劵如下：</p>
+		<ul class="box">
+		<!-- 已领取 添加  hasget-->
+			<li class="box hasget">
+				<div class="text">
+					<p class="money">10元</p>
+					<p class="exchange samll">可兑换100米粒</p>
+					<p class="usedate samll">有效期到<span>2018-12-30</span></p>
+				</div>
+				
+				<div class="ICON box "></div>
+			</li>
+			<!-- 已过期 添加  hasover-->
+			<li class="box hasover">
+				<div class="text">
+					<p class="money">10元</p>
+					<p class="exchange samll">可兑换100米粒</p>
+					<p class="usedate samll">有效期到<span>2018-12-30</span></p>
+				</div>
+				
+				<div class="ICON box "></div>
+			</li>
+
+			<li class="box">
+				<div class="text">
+					<p class="money">20元</p>
+					<p class="exchange samll">可兑换100米粒</p>
+					<p class="usedate samll">有效期到<span>2018-12-30</span></p>
+				</div>
+
+			</li>
+
+			<li class="box">
+				<div class="text">
+					<p class="money">30元</p>
+					<p class="exchange samll">可兑换100米粒</p>
+					<p class="usedate samll">有效期到<span>2018-12-30</span></p>
+				</div>
+			</li>
+
+		</ul>
+			
+	</div>
+	
+	<a class="box coupons_getSubmit" href="#">提交验证</a>
+
+
+
+<!-- <div class="coupons_maskWrap">
+	<div class="coupons_mask"></div>
+	<div class="coupons_maskContent">
+		<img src="../../img/close_login.png" alt="">
+		<p class="title">领取成功</p>
+		<p class="status">恭喜您领取成功，当前账户余额
+1000米粒！</p>
+		<div class="btnsGroup">
+			<a class="cancle btn" href="#">继续兑换</a>
+			<a class="sure btn" href="#">确定</a>
+		</div>
+</div>
+ -->
+
+</body>
+
+<script src="../../js/jquery.min.js" type="text/javascript"></script>
+
+
+<script src='../../js/readingCoupons.js'></script>
+<script>
+	$('.coupons_get ul li').each(function(index,item){
+		var i=index;
+		$(this).click(function(){
+			var clas=$(this).attr('class')
+			console.log(clas)
+			if (clas=='box hasget'||clas=='box hasover') {
+				return;
+			} else{
+				$('.coupons_get ul li').removeClass('active')
+			   $(this).addClass('active')
+			}
+			
+			
+		})
+			
+	})
+
+$('.coupons_getSubmit').click(function(){
+	console.log($('.active').html())
+	var ele='<div class="ICON box "></div>';
+	$('.coupons_get ul li.active').append(ele) ;
+	$('.coupons_get ul li.active').removeClass('active').addClass('hasget')
+
+	
+})
+
+// 调用
+// function readCoupons(title,content,btncancle,btnSure,leftCallback,rightCallback)
+// readCoupons('领取陈宫','恭喜您领取成功，当前账户余额1000米粒！','继续杜欢','求看书','','')
+// readCoupons('领取失败','恭喜您领取成功，当前账户余额1000米粒！','取消','确定','','')
+// readCoupons(title,content,btncancle,btnSure,leftCallback,rightCallback)
+// function a(){
+// 	window.location.href='https://www.baidu.com'
+// }
+// function b(){
+// 	console.log('quren')
+// }
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,129 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+    <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+	<!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+	<title>搜索</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<header class="common_detail box clear ">
+		<a class="back" href="#" title="">
+			<img src="../img/backblack.png" alt="">
+		</a>
+		<p>搜索</p>
+		<div class=" fr box">
+			<a href="#"><img src="../img/house.png" alt=""></a>
+			<a href="#"><img src="../img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+	<div class="searching">
+		<div class="search_area clear box">
+			<form action="">
+                <!--<div class="search_area_box  box fl">
+                    <img src="../img/magnifying_glass.png" alt="">
+                    <input class="box" type="text" type="search" placeholder="书名/书号/作者">
+                </div>-->
+                <div class="search_area_box_01  box fl">
+                    <input id='myinput' class="box" type="search" placeholder="书名/书号/作者">
+                    <img src="../img/magnifying_glass.png" alt="">
+                </div>
+			<p class="fr">
+				<span class="button">搜索</span>
+			</p>
+			</form>
+			
+		</div>
+
+		<div class="Everyone_search">
+			<div class="Everyone_search_title box clear">
+				<p class="fl">大家都在搜</p>
+				<p class="fr"><img src="../img/change.png" alt="">换一换</p>
+			</div>
+			<ul class="box">
+				<li class="box"><a href="#">芝麻芝开门公</a></li>
+				<li class="box"><a href="#">芝麻额麻芝开</a></li>
+				<li class="box"><a href="#">公额麻芝开麻芝开</a></li>
+				<li class="box"><a href="#">芝麻芝开门公额</a></li>
+				<li class="box"><a href="#">芝麻芝开门公额</a></li>
+			</ul>
+		</div>
+
+		<div class="history_search Everyone_search">
+			<div class="Everyone_search_title box clear">
+				<p class="fl">历史搜索</p>
+				<p class="fr clearup"><img src="../img/trash.png" alt="">清空</p>
+			</div>
+			<ul class="box history_search_list">
+				<li class="box"><a href="#">芝麻芝开门公</a></li>
+				<li class="box"><a href="#">芝麻额麻芝开</a></li>
+				<li class="box"><a href="#">公额麻芝开麻芝开</a></li>
+				<li class="box"><a href="#">芝麻芝开门公额</a></li>
+				<li class="box"><a href="#">芝</a></li>
+			</ul>
+		</div>
+
+        <div class="bg"></div>
+	</div>
+
+	
+
+<footer class="box bw">
+		<div class="download">
+			<a href="#" class="download_btn">
+				<img src="../img/phone.png" alt="">
+				<span>客户端下载</span>
+			</a>
+		</div>
+		<p class="footer_title">客服</p>
+		<div class="footer_message clear">
+			<div class="f_m_left fl">
+				<p>
+					<span>工作时间：周一到周五9:00-18:00</span>
+					<span>客服邮箱：354654364@qq.com</span>
+					<span>客服QQ：354654364</span>
+					<span>微信公众号：超阅小说</span>
+				</p>
+			</div>
+			<div class="f_m_right fr">
+				<img src="../img/weixin.png" alt="">
+			</div>
+		</div>
+		<div class="legislation_note">
+			<p>© 2015 cyread.com  京ICP备12016550号</p>
+			<a href="https://v.pinpaibao.com.cn/cert/site/?site=mt.cyread.cn&at=business"><img src="../img/hy.png" alt=""></a>
+		</div>
+	</footer>
+
+	
+		
+
+
+
+
+
+
+</body>
+<script src="../plugIn/libflexible/flexible.debug.js"></script>
+<script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script>
+	$(function(){
+		$('.clearup').click(function(){
+			$('.history_search_list li').hide()
+		})
+
+// 搜索框调取手机键盘search 按键
+		$('#myinput').bind('search',function(){
+			
+		})
+
+
+
+	})
+
+</script>
+</html>

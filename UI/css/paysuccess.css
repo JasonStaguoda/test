@@ -1,0 +1,47 @@
+.bxPaySuccess{
+	background-color: #fff;
+}
+
+.bxPaySuccess .PaySuccess_title{
+	font-size: 0.53rem;
+	color:#1AAD19;
+	text-align: center;
+	padding: 2.19rem 0 1.41rem;
+}
+
+
+.bxPaySuccess .PaySuccess_title img{
+	width:0.88rem;
+	height: 0.88rem;
+	vertical-align: middle;
+	margin: -0.08rem 0.31rem 0 0;
+}
+
+
+.PaySuccess_img{
+	text-align: center;
+	font-size: 0.47rem;
+}
+.PaySuccess_img img{
+	width: 6.72rem;
+	height: 6.75rem;
+}
+
+.PaySuccess_img p{
+	margin: 0.23rem 0;
+}
+
+.PaySuccess_back{
+	margin: 0 auto;
+	display: block;
+	width:4.38rem;
+	height: 0.94rem;
+	border:1px solid #666;
+	color: #666;
+	line-height:0.94rem;
+	text-align: center;
+	border-radius: 0.16rem;
+	font-size: 0.47rem;
+	margin-top: 1.25rem;
+}
+

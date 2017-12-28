@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+    <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>济公全传-奇文小说</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <link href="../css/listening/listening.css" rel="stylesheet" />
+    <!-- <script src="../js/listenjs/jqmobi.js"></script> -->
+    
+</head>
+<body>
+    <header class="common_detail box clear ">
+        <a class="back" href="#" title="">
+            <img src="../img/listenimg/backW.png" alt="">
+        </a>
+        <p>阅读详情</p>
+        <div class=" fr box">
+            <a href="../html/index.html"><img src="../img/listenimg/bookcaseW.png" alt=""></a>
+            <a href="#"><img src="../img/listenimg/index.png" alt=""></a>
+        </div>
+    </header>
+
+     <!-- 磨砂背景 -->
+    <div class="blur">
+        <img src="../upload/2.jpg" alt="">
+         <p></p>
+    </div>
+
+     
+    <div class="cdBox">
+        <div class="coverBox">
+            <img class="coverImage" src="../upload/2.jpg">
+        </div>
+    </div>
+    <div class="cdText">
+        济公全传 - 济公全传001去打球哦I基督教晚饭回答我I好的
+        <!-- <span>主播：郭小亭</span> -->
+    </div>
+    <div class="controlBox">
+        <div id="playContent">
+            <div onclick="myControl.selectTime(event)" id="progressWrap">
+                <div id="progress" style="display: block; width: 2px;"></div>
+                <div class="timeBox"><span id="currentTime">00:00</span><span id="totleTime">12:30</span></div>
+            </div>
+        </div>
+        <ul>
+            <li class="fl">
+                <a class="toDetail" href="listen-detail.html"></a>
+            </li>
+            <li class="fl">
+                <a id="prevButton" class="prev gray" href="javascript:;"></a>
+            </li>
+            <li class="playbg fl">
+                <a id="playButton" onclick="myControl.mainControl()" class="play"></a>
+            </li>
+            <li class="fl">
+                <a id="nextButton" class="next" href="play.aspx?c=QEs1dEB3YUxAWVw4QGdmOENnZj1CXDAw&NovelId=578&s=1492996949&t=DgV6NhkbK3MbORZwDAV7dg4XBncOFxJ2Dikodg0pKHMMEn5.&r=9118"></a>
+            </li>
+            <li class="fl">
+                <a class="toDirectory"  href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    <audio id="myMusic">
+      <source src="http://file.huaxiazi.com/mp3/济公全传/jgqz001.mp3" type="audio/ogg">
+      <source src="http://file.huaxiazi.com/mp3/济公全传/jgqz001.mp3" type="audio/mpeg">
+    </audio>
+
+
+ 
+   
+   
+
+   <!-- 目录弹窗 -->
+   <div class="listen-directory-mask">
+       <div class="bg"></div>
+       <div class="listen-directory-list">
+           <p >
+               <span class="fl">共367章</span>
+               <span class="fr cur">倒序</span>
+           </p>
+
+           <!-- 当前播放章节-->
+            <p class="isPlay nowplay"><span>第001章 他叫白晓春</span><img src="../img/v.png" alt=""></p>
+
+          <!--  <div class="listen-charpter-ulwrap">
+              <ul class="ul">
+               <li class="isPlay"><span>第001章 他叫白晓春</span><img src="../img/v.png" alt=""></li>
+               <li><span>第002章 他叫白晓春他叫白晓春他叫白晓春他叫白晓春他叫白晓春他叫白晓春</span><img src="../img/v.png" alt=""></li>
+               <li><span>第003章 他叫白晓春</span></li>
+               <li><span>第004章 他叫白晓春</span><img src="../img/v.png" alt=""></li>
+               <li><span>第005章 他叫白晓春</span></li>
+               <li><span>第006章 他叫白晓春</span></li>
+               <li><span>第007章 他叫白晓春</span></li>
+               <li><span>第008章 他叫白晓春</span></li>
+               <li><span>第009章 他叫白晓春</span></li>
+               <li><span>第010章 他叫白晓春</span></li>
+           </ul>
+
+           </div> -->
+            <div class="directory bw listen-detail-list" style="-webkit-overflow-scrolling: touch;">
+                <ul class="box" id='listBox'>
+                  <li class="box"><a href="#"><span>001 第一章  菜拉布问题个人更而供热忽然个人更而供热忽然听见合乎即佛为国家配件看破看vepokg听见合</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>002 第二章  菜拉布问题个人更而供热忽然个人更而供热忽然听见合乎即佛为国家配件看破看vepokg听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>003  菜拉布问题个人更而供热个人更而供热忽然听见合乎即佛为国家配件看破看vepokg忽然听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>004  菜拉布问题个人更而供热个人更而供热忽然听见合乎即佛为国家配件看破看vepokg忽然听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>004  菜拉布问题个人更而供热个人更而供热忽然听见合乎即佛为国家配件看破看vepokg忽然听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>004  菜拉布问题个人更而供热个人更而供热忽然听见合乎即佛为国家配件看破看vepokg忽然听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>004  菜拉布问题个人更而供热个人更而供热忽然听见合乎即佛为国家配件看破看vepokg忽然听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>004  菜拉布问题个人更而供热个人更而供热忽然听见合乎即佛为国家配件看破看vepokg忽然听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>004  菜拉布问题个人更而供热个人更而供热忽然听见合乎即佛为国家配件看破看vepokg忽然听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                  <li class="box"><a href="#"><span>004  菜拉布问题个人更而供热个人更而供热忽然听见合乎即佛为国家配件看破看vepokg忽然听见合乎</span><img src="../img/v.png" alt=""></a></li>
+                </ul>
+
+            </div>
+           
+
+           <a class="close" href="javascript:;">关闭</a>
+
+
+       </div>
+
+
+   </div>
+
+</body>
+
+<script src="../plugIn/libflexible/flexible.debug.js"></script>
+<script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/listenjs/tsall.js"></script>
+
+<script type="text/javascript" src="../js/listenjs/load.js"></script>
+
+<script>
+
+// 进入界面自动播放
+// $(document).ready(function(){
+//     myControl.mainControl()
+//     imageShow()
+// })
+
+function imageShow(){
+    var imgBox=$('.coverBox');
+    var imgItem=$('.coverImage');
+    var boxH=parseFloat(imgBox.height());
+    var itemH=parseFloat(imgItem.height());
+    var H=-parseFloat((itemH-boxH)/2);
+   
+    console.log(H)
+    imgItem.css({
+        'top': H
+    })
+}
+// imageShow()
+
+
+$('.toDirectory').click(function(){
+    $('.listen-directory-mask').show()
+     // $('.listen-charpter-ulwrap').scrollTop(5)
+})
+$('.listen-directory-mask .close').click(function(){
+    $('.listen-directory-mask').hide()
+})
+
+
+// 点击章节，变为播放状态
+// $(document).on('click', '.ul li',function(event){
+//     var event=event||window.event;    
+//     event.stopPropagation(); 
+   
+//     $('.ul li').removeClass('isPlay')
+//     $(this).addClass('isPlay')
+// })
+
+
+
+
+// 自动加载
+	
+
+// load(obj,callback)
+	//获取滚动条当前的位置 
+// function getScrollTop() { 
+// 	var scrollTop = 0; 
+// 	if (document.documentElement && document.documentElement.scrollTop) { 
+// 		scrollTop = ele.scrollTop; 
+// 	} 
+// 	else if (document.body) { 
+// 		scrollTop = ele.scrollTop; 
+// 	} 
+// 	return scrollTop; 
+//   console.log(scrollTop)
+// } 
+// getScrollTop()
+
+
+
+//获取当前可是范围的高度 
+// function getClientHeight() { 
+// 	var clientHeight = 0; 
+// 	if (document.body.clientHeight && document.documentElement.clientHeight) { 
+// 		clientHeight = Math.min(ele.clientHeight, ele.clientHeight); 
+// 	} 
+// 	else { 
+// 		clientHeight = Math.max(ele.clientHeight, ele.clientHeight); 
+// 	} 
+// 	return clientHeight; 
+// } 
+
+//获取文档完整的高度 
+// function getScrollHeight() { 
+// 	return Math.max(ele.scrollHeight-10, ele.scrollHeight-10); 
+// } 
+
+// function scrolling(callback){
+// 	ele.onscroll = function () {
+//   	if (getScrollTop() + getClientHeight() >= getScrollHeight()) { 
+//     		if (typeof callback === 'function' ){
+//     			callback()
+//     		}
+//   	 } 
+// 	}
+// }
+
+var ele=document.getElementsByClassName('listen-detail-list')[0];
+
+loading(ele,getData1)
+// scrolling(getData);
+function getData1(){
+    console.log('到底了')
+     for(var i=0;i<3;i++){
+        var li=$('<li class="box"><a href="#"><span>001 第一章菜拉布件看破看vepokg听见合</span><img src="../img/v.png" alt=""></a></li>');
+        $(".listen-detail-list ul").append(li);
+    }
+}
+
+
+</script>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+    
+	<!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+	<title>购买章节</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/rechargecenter.css">
+</head>
+<body>
+	<header class="common_detail box clear ">
+		<a class="back" href="consumption_records.html" title="">
+			<img src="../img/backblack.png" alt="">
+		</a>
+		<p>购买章节</p>
+		<div class=" fr box">
+			<a href="#"><img src="../img/house.png" alt=""></a>
+			<a href="#"><img src="../img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+	<div class="recharge_records comic_buy_section box">
+		<p class="box">总计：<span>100</span>米粒（共<span>2</span>章）</p>
+		<ul class="box">
+			<li class="box">
+				<p>第68章  我是美人的啦我是美人的啦啦 我是美人的啦啦 我是美人的啦啦 我是美人的啦啦 我是美人的啦啦vv</p>
+				<p class="clear">
+					<span class="fl">充值：1000米粒</span>
+					<span class="fr">2017-03-20 13:57:26</span>
+				</p>
+			</li>
+			<li class="box">
+				<p>第68章  我是美人的啦啦啦啦啦啦...</p>
+				<p class="clear">
+					<span class="fl">充值：1000米粒</span>
+					<span class="fr">2017-03-20 13:57:26</span>
+				</p>
+			</li>
+		</ul>
+	</div>
+
+	
+	<footer class="box bw">
+		<div class="download">
+			<a href="#" class="download_btn">
+				<img src="../img/phone.png" alt="">
+				<span>客户端下载</span>
+			</a>
+			<!-- <a href="#" class="download_btn">
+				<span>IOS客户端</span>
+			</a>
+			<a href="#" class="download_btn">
+				<span>安卓客户端</span>
+			</a> -->
+		</div>
+		<p class="footer_title">客服</p>
+		<div class="footer_message clear">
+			<div class="f_m_left fl">
+				<p>
+					<span>工作时间：周一到周五9:00-18:00</span>
+					<span>客服邮箱：354654364@qq.com</span>
+					<span>客服QQ：354654364</span>
+					<span>微信公众号：超阅小说</span>
+				</p>
+			</div>
+			<div class="f_m_right fr">
+				<img src="../img/weixin.png" alt="">
+			</div>
+		</div>
+	</footer>
+	
+</body>
+<script src="../plugIn/libflexible/flexible.debug.js"></script>
+<script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script>
+	$(function(){
+
+		// footer下载
+		var downbtn=$('.download_btn');
+		var btnnum=downbtn.length;
+		console.log(btnnum);
+		if (btnnum==1) {
+			$('footer .download a').css('width','100%')
+		} else if(btnnum==2){
+			downbtn.css('width','40%')
+		}
+
+	})
+
+</script>
+</html>

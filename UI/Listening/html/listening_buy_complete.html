@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../../plugIn/libflexible/flexible_css.debug.js"></script>
+    
+	<!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+	<title>听书购买全本</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/buying.css">
+	<link rel="stylesheet" href="../css/comic.css">
+
+</head>
+<body class="bw">
+	<header class="common_detail box clear ">
+		<a class="back" href="#" title="">
+			<img src="../css/img/backblack.png" alt="">
+		</a>
+		<p>解二等分GV而被忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店</p>
+		<div class=" fr box">
+			<a href="#"><img src="../css/img/house.png" alt=""></a>
+			<a href="#"><img src="../css/img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+	<div class="buying box">
+		<div class="buy_head clear box bw">
+			<img src="../css/img/comic.png" alt="">
+			<p>本章是VIP专属哦</p>
+			<p>请支持作者，支持正版！</p>
+			
+		</div>
+			
+		<div class="change_status_1">
+			<div class="top_up_rechagre box">
+				<a class="top_up_rechagre_btn" href="#">购买本章<span>（260米粒）</span></a>
+			</div>
+
+		
+			<div class="clear buy_charpter_account box">
+				<p class="fl">账户余额：<span>0</span>&nbsp;米粒</p>
+			</div>
+			
+		
+			<div class="buy_complete_des">
+				<p><span class="box olcircle"></span>后续VIP章节购买不再提醒</p>
+				
+				
+			</div>
+		</div>
+		
+	</div>
+	
+	
+
+
+
+
+	<!-- 加入书架弹窗 -->
+	<div class="small_tip">
+		已在书架
+	</div>
+
+</body>
+<script src="../../plugIn/libflexible/flexible.debug.js"></script>
+ <script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../../js/jquery.min.js" type="text/javascript"></script>
+<script>
+	$(function(){
+		// 购买全本 余额充足，提示购买成功
+		var timer;
+		function hide(){
+			$('.small_tip').hide('1000')
+		}
+		function show(){
+			$('.small_tip').show("1500");
+		}
+		$('.top_up_rechagre_btn').click(function(){
+			$('.mask').hide();
+			$('.Prompt_top_up').hide();
+			$('.small_tip').text('购买成功');
+			show();
+			timer=setTimeout(hide,1000)
+		})
+
+})
+
+</script>
+</html>

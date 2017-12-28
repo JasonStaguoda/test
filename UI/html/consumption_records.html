@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+	<title>消费记录</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/rechargecenter.css">
+</head>
+<body>
+	<header class="common_detail box clear ">
+		<a class="back" href="Personal_center.html" title="">
+			<img src="../img/backblack.png" alt="">
+		</a>
+		<p>消费记录</p>
+		<div class=" fr box">
+			<a href="#"><img src="../img/house.png" alt=""></a>
+			<a href="#"><img src="../img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+
+	<!-- tab切换 -->
+	<!-- <div class="directory_tab consumption_tab  box">
+		<span class="tabactivity fl">购买</span>
+		<span class="bbr fr">打赏</span>
+	</div> -->
+<!-- 购买 -->
+<div class="consumption_records consumption_buy recharge_records box">
+		<ul class="box">
+			<li class="box">
+				<a href="comic_buysection.html">
+					<p>美人心计附近我房间诶我绝望房间诶我绝望房间诶我绝望房间诶我绝望房间诶我绝望句看看【吧可欧及佛教</p>
+					<p class="clear">
+						<span class="fl">总计：200米粒（共10章）</span>
+						<span class="fr">
+							<img src="../img/arrow_left.png" alt="">
+						</span>
+					</p>
+					<p>2017-03-20 13:57:26</p>
+				</a>
+			</li>
+
+			<li class="box">
+				<a href="comic_buysection.html">
+					<p>美人心计美人心计美人心计美人心计美人心计美人心计美人心计美人心计美人心计美人心计美人心计美人心计美人心计</p>
+					<p class="clear">
+						<span class="fl">总计：200米粒（共10章）</span>
+						<span class="fr">
+							<img src="../img/arrow_left.png" alt="">
+						</span>
+					</p>
+					<p>2017-03-20 13:57:26</p>
+				</a>
+			</li>
+
+			<li class="box">
+				<a href="comic_buysection.html">
+					<p>美人心计</p>
+					<p class="clear">
+						<span class="fl">总计：200米粒（共10章）</span>
+						<span class="fr">
+							<img src="../img/arrow_left.png" alt="">
+						</span>
+					</p>
+					<p>2017-03-20 13:57:26</p>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+
+
+<!-- 打赏 -->
+	<div class="consumption_records consumption_give  recharge_records box">
+		<ul class="box">
+			<li class="box">
+				<p>汤圆<span class="consumption_num">（1000米粒）</span></p>
+				<p class="clear">
+					<span class="fl">《三生三世十里桃花》</span>
+					<span class="fr">2017-03-20 13:57:26</span>
+				</p>
+			</li>
+			<li>
+				<p>汤圆<span class="consumption_num">（1000米粒）</span></p>
+				<p class="clear">
+					<span class="fl">《三生三世十里桃花》</span>
+					<span class="fr">2017-03-20 13:57:26</span>
+				</p>
+			</li>
+		</ul>
+	</div>
+
+
+
+	<!-- <div class="bg"></div> -->
+	
+	<footer class="box bw">
+		<div class="download">
+			<a href="#" class="download_btn">
+				<img src="../img/phone.png" alt="">
+				<span>客户端下载</span>
+			</a>
+			<!-- <a href="#" class="download_btn">
+				<span>IOS客户端</span>
+			</a>
+			<a href="#" class="download_btn">
+				<span>安卓客户端</span>
+			</a> -->
+		</div>
+		<p class="footer_title">客服</p>
+		<div class="footer_message clear">
+			<div class="f_m_left fl">
+				<p>
+					<span>工作时间：周一到周五9:00-18:00</span>
+					<span>客服邮箱：354654364@qq.com</span>
+					<span>客服QQ：354654364</span>
+					<span>微信公众号：超阅小说</span>
+				</p>
+			</div>
+			<div class="f_m_right fr">
+				<img src="../img/weixin.png" alt="">
+			</div>
+		</div>
+	</footer>
+	
+</body>
+<script src="../plugIn/libflexible/flexible.debug.js"></script>
+<script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script>
+	$(function(){
+			$('.directory_tab span').each(function(index,item){
+					var i=index;
+				$(this).click(function(){
+					$('.directory_tab span').css({
+					'borderColor':'transparent',
+					'color':'#000'
+					})
+					$(this).css({
+						'borderColor':'#ff5c4d',
+						'color':'#ff5c4d'
+					})
+					$('.consumption_records').hide();
+					$('.consumption_records').eq(i).show();
+				})
+			})
+
+		// footer下载
+		var downbtn=$('.download_btn');
+		var btnnum=downbtn.length;
+		console.log(btnnum);
+		if (btnnum==1) {
+			$('footer .download a').css('width','100%')
+		} else if(btnnum==2){
+			downbtn.css('width','40%')
+		}
+
+	})
+
+</script>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+	<title>微信登录</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/book_Comment.css">
+	<link rel="stylesheet" type="text/css" href="../css/read_detail.css">
+</head>
+<body>
+	<header class="common_detail box clear ">
+		<a class="back" href="book_review.html" title="">
+			<img src="../img/backblack.png" alt="">
+		</a>
+		<p>微信登录</p>
+		<div class=" fr box">
+			<a href="#"><img src="../img/house.png" alt=""></a>
+			<a href="#"><img src="../img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+	<div class="Comment_back box">
+		<ul class="Comment_back_uls box  bw">
+			<li >
+				<div class="">
+					<img class="" src="../upload/person3.png"/>
+					<p class="">
+						<span>左右言它</span><br />
+						<span>2017-03-15</span>
+					</p>
+				</div>
+				<p>评论评论评论评论评论,评论评论评论评论评论评论,评
+评论评论评论评论评论评论评论评论</p>
+			</li>
+		</ul>
+		<div class="bg"></div>
+		<!-- 回复 -->
+		<div class="reply">
+			<p>全部回复 (<span class="comment_num">2</span>)</p>
+			<!--无评论-->
+			<div class="no_comment box">
+				<img src="../img/comment0.png" alt="" />
+				<br />
+				快来抢沙发吧~
+			</div>
+			<!-- 有评论 -->
+			<ul class="has_comment box">
+				<li class="clear box">
+					<div class="reviewers fl">
+						<img  src="../upload/person.png" alt="">
+					</div>
+					<div class="comment_reviewers box">
+						<p class="clear">
+							<span class="fl">汗流浃背</span>
+							<span class="fr">1楼</span>
+						</p>
+						<p>2017-02-13</p>
+						<p>
+							<span>回复 </span>
+							<span>左右言它</span>
+							<span>:</span>
+							 <span class="sended_message">同感！</span>
+						</p>
+					</div>
+					
+				</li>
+
+				<li class="clear box">
+					<div class="reviewers fl">
+						<img  src="../upload/person.png" alt="">
+					</div>
+					<div class="comment_reviewers box">
+						<p class="clear">
+							<span class="fl">汗流浃背</span>
+							<span class="fr">1楼</span>
+						</p>
+						<p>2017-02-13</p>
+						<p>
+							<span>回复</span>
+							<span>左右言它</span>
+							<span>:</span>
+							 <span class="sended_message">同感！</span>
+						</p>
+					</div>
+					
+				</li>
+			</ul>
+			
+			
+		</div>
+		
+		<!-- 换页 -->
+	<div class="Turn_page box">
+		<div class="previous_page fl box">
+			上一页
+		</div>
+		<div class="page_num fl box">
+			<span class="choose_num">1</span>/<span>22</span>
+			<img class="down"  src="../img/down.png" alt="">
+			<select class="selects" name="" >
+				<option>1</option>
+				<option>2</option>
+				<option >3</option>
+				<option>4</option>
+				<option>5</option>
+				<option >6</option>
+				<option >7</option>
+				<option >8</option>
+				<option >100</option>
+			</select>
+		</div>
+		<div class="next_page fr box">
+			下一页
+		</div>
+	</div>
+
+
+		<div class="reply_btn">
+			<img src="../img/comment.png"/>
+			<span>回复</span>
+		</div>
+
+		<!-- 回复遮罩层 -->
+		<div class="mask"></div>
+		<div class="Text_input box">
+			<p>
+				<span class="cancle fl">取消</span>
+				<span class="send fr">发表</span>
+			</p>
+			<div class="send_area box">
+				<p>
+					<span>回复 </span>
+					<span>左右言它 ：</span>
+				</p>
+				
+				<textarea name="" style='resize: none;'></textarea>
+
+			</div>
+			
+			
+		</div>
+
+	</div>
+</body>
+<script src="../plugIn/libflexible/flexible.debug.js"></script>
+<script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('.reply_btn span').click(function(){
+			$('.Text_input').show();
+			$('.mask').show()
+		})
+		$('.cancle').click(function(){
+			$('.Text_input').hide();
+			$('.mask').hide()
+		})
+
+		// 发送信息
+		var html='';
+		$('.send').click(function(){
+			var message=$('textarea').val();
+			var num=$('.comment_num').text();
+			if (message=='') {
+				alert('评论不能为空');
+				$('textarea').focus();
+			}else{
+				num++;
+				// 字符串拼接，请自行修改
+				html='<li class="clear box"><div class="reviewers fl">'+'<img  src="../upload/person.png" alt=""></div><div class="comment_reviewers box"><p class="clear"><span class="fl">'+message+'</span><span class="fr">'+'1楼</span></p><p>'+'2017-02-13'+'</p><p><span>回复 </span><span>'+message+'</span><span> : </span><span class="sended_message">'+message+'</span></p></div></li>';
+
+				$('.has_comment').prepend(html);
+				$('.Text_input').hide();
+				$('.mask').hide();
+				$('textarea').val('');
+				$('.comment_num').text(num)
+			}
+
+		})
+
+
+
+	})
+</script>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+   
+	<!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+	<title>个人中心</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/personalcenter.css">
+</head>
+<body>
+	<header class="common_detail box clear">
+		<a class="back" href="#" title="">
+			<img src="../img/backblack.png" alt="">
+		</a>
+		<p>个人中心</p>
+		<div class=" fr box">
+			<a href="#"><img src="../img/house.png" alt=""></a>
+			<a href="#"><img src="../img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+
+	<!-- 返回个人中心提示 -->
+	<div class="back_index box">
+		<span>返回首页</span>
+	</div>
+
+
+
+	<div class="personal_nickname bw box">
+		<img src="../upload/nicklogo.png" alt="">
+		<br>我是昵称昵称
+	</div>
+
+	<div class="personal_account bw box">
+		<div class="personal_accounting">
+			<img src="../img/person.png" alt="">
+			<span>账号：</span>
+			<span id="account">120358416</span>  
+			<!-- <span class="copy" data-clipboard-action="copy" data-clipboard-target="#account">&nbsp;&nbsp;复制</span> -->
+		</div>
+		<div class="personal_balance clear">
+			<img src="../img/money.png" alt="">
+			<span>余额：</span>
+			<span class="copy">100</span>
+			<span>米粒</span>
+			<a class="personal_recharge fr" href="recharge_center.html">充值</a>
+		</div>
+			<!-- <span class="copy" data-clipboard-action="copy" data-clipboard-target="#account">&nbsp;&nbsp;复制</span> -->
+		</div>
+
+	</div>
+	
+	<div class="personal_record box bw">
+
+	<!-- 充值卷兑换 -->
+		<a href="" class="exchange clear">
+			<img src="../img/dh.jpg" alt="">
+			<span>领取阅读劵</span>
+			<img class="fr" src="../img/arrow_left.png" alt="">
+		</a>
+
+		<a href="recharge_records.html" class="recordin clear">
+			<img src="../img/recharge.png" alt="">
+			<span>充值记录</span>
+			<img class="fr" src="../img/arrow_left.png" alt="">
+		</a>
+		
+
+
+		<a href="consumption_records.html" class="recording clear">
+			<img src="../img/consumption.png" alt="">
+			<span>消费记录</span>
+			<img class="fr" src="../img/arrow_left.png" alt="">
+		</a>
+		<a href="#" class="clear">
+			<img src="../img/reading.png" alt="">
+			<span>最近阅读</span>
+			<img class="fr" src="../img/arrow_left.png" alt="">
+		</a>
+	</div>
+
+	<div class="personal_back bw">
+		<a href="#">退出登录</a>
+	</div>
+		
+	<footer class="box bw">
+		<div class="download">
+			<a href="#" class="download_btn">
+				<img src="../img/phone.png" alt="">
+				<span>客户端下载</span>
+			</a>
+			<!-- <a href="#" class="download_btn">
+				<span>IOS客户端</span>
+			</a>
+			<a href="#" class="download_btn">
+				<span>安卓客户端</span>
+			</a> -->
+		</div>
+		<p class="footer_title">客服</p>
+		<div class="footer_message clear">
+			<div class="f_m_left fl">
+				<p>
+					<span>工作时间：周一到周五9:00-18:00</span>
+					<span>客服邮箱：354654364@qq.com</span>
+					<span>客服QQ：354654364</span>
+					<span>微信公众号：超阅小说</span>
+				</p>
+			</div>
+			<div class="f_m_right fr">
+				<img src="../img/weixin.png" alt="">
+			</div>
+		</div>
+	</footer>
+	
+</body>
+ <script src="../plugIn/libflexible/flexible.debug.js"></script>
+ <script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script src="../plugIn/clipboard/dist/clipboard.min.js" type="text/javascript" ></script>
+<script>
+	$(function(){
+		// footer下载
+		var downbtn=$('.download_btn');
+		var btnnum=downbtn.length;
+		console.log(btnnum);
+		if (btnnum==1) {
+			$('footer .download a').css('width','100%')
+		} else if(btnnum==2){
+			downbtn.css('width','40%')
+		}
+
+		// 复制黏贴
+		// var clipboard = new Clipboard('.copy');
+	 //    clipboard.on('success', function(e) {
+	 //        console.log(e);
+	 //    });
+
+	 //    clipboard.on('error', function(e) {
+	 //        console.log(e);
+	 //    });
+
+	})
+
+</script>
+</html>

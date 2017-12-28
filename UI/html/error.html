@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+    <script src="../plugIn/libflexible/flexible.debug.js"></script>
+    <script src="../plugIn/libflexible/makegrid.debug.js"></script>
+	<!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+	<title>出错了</title>
+	<link rel="stylesheet" href="../css/common.css">
+</head>
+<body class="bw">
+	<div class="error_wrap box">
+	<!-- 不同状态下选一张图片显示 -->
+		<img src="../img/error1.png" alt="">
+		<img src="../img/error2.png" alt="">
+
+		<p class="error_title">操作标题</p>
+		<p class="error_warm">哎呦~页面被外星人劫持了！</p>
+		<a class="error_operation " href="#" title="">
+			<img src="../img/refresh.png" alt="">返回
+		</a>
+		<a  class="error_operation " href="index.html" title="">
+			<img src="../img/home.png" alt="">首页
+		</a>
+	</div>	
+	
+</body>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script>
+	$(function(){
+		$('.error_wrap a').click(function(){
+			$('.error_wrap a').removeClass('erroractivity');
+			$(this).addClass('erroractivity');
+			
+		})
+	})
+
+</script>
+</html>

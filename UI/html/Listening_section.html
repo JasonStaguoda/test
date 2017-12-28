@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+    
+	<!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+	<title>听书专区</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/additional.css">
+</head>
+<body>
+	<header class="common_detail box clear ">
+		<a class="back" href="#" title="">
+			<img src="../img/backblack.png" alt="">
+		</a>
+		<p>听书专区</p>
+		<div class=" fr box">
+			<a href="#"><img src="../img/house.png" alt=""></a>
+			<a href="#"><img src="../img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+	<!-- <div class="listening_zone_ordering bw">
+		<ul class="box">
+			<li><a href="#">
+				<img src="../img/sourse.png" alt=""><br>
+				资源丰富
+			</a></li>
+			<li><a href="#">
+				<img src="../img/quality.png" alt=""><br>
+				品质精良
+			</a></li>
+			<li><a href="#">
+				<img src="../img/price.png" alt=""><br>
+				价格优惠
+			</a></li>
+		</ul>
+		<a class="Monthly_order" href="#">
+			<span>包月订购</span>
+			<span>（2000米粒/月）</span>
+		</a>
+		<div class="buy_complete_des">
+			<p>温馨提示：</p>
+			<p><span class="box olcircle"></span>订购“听书专区”包月后，站内所有听书内容在订购期内不再收费。</p>
+			<p><span class="box olcircle"></span>站点的小说内容不包含在“听书专区”包月内</p>
+		</div>
+		
+		
+	</div> -->
+<!-- /*听书列表*/ -->
+	<div class="listening_reconmond bw">
+		<div class="common_title box bw">
+				热门推荐
+		</div>
+		<ul class="box bw">
+			<li class="clear box"><a href="#" >
+				<span class="fl">1</span>
+				<span class="fl">豪门惊梦：被弃的名媛豪门惊梦：被弃的名媛豪门惊梦：被弃的名媛豪门惊梦：被弃的名媛豪门惊梦：被弃的名媛豪门惊梦：被弃的名媛</span>
+				<img  class="fr"  src="../img/arrow_left.png" alt="">
+			</a></li>
+			<li class="clear box"><a href="#" >
+				<span class="fl">2</span>
+				<span class="fl">豪门惊梦：几艘评分vjujdpj披风二顾客被弃的名媛</span>
+				<img  class="fr"  src="../img/arrow_left.png" alt="">
+			</a></li>
+			<li class="clear box"><a href="#" >
+				<span class="fl">3</span>
+				<span class="fl">豪门惊梦：被弃的名媛</span>
+				<img  class="fr"  src="../img/arrow_left.png" alt="">
+			</a></li>
+			<li class="clear box"><a href="#" >
+				<span class="fl">4</span>
+				<span class="fl">豪门惊梦：被弃的名媛</span>
+				<img  class="fr"  src="../img/arrow_left.png" alt="">
+			</a></li>
+			<li class="clear box"><a href="#" >
+				<span class="fl">5</span>
+				<span class="fl">豪门惊梦：被弃的名媛</span>
+				<img  class="fr"  src="../img/arrow_left.png" alt="">
+			</a></li>
+			<li class="clear box"><a href="#" >
+				<span class="fl">6</span>
+				<span class="fl">豪门惊梦：被弃的名媛</span>
+				<img  class="fr"  src="../img/arrow_left.png" alt="">
+			</a></li>
+		</ul>
+		<div class="listening_see_more box">
+			<a class=" box" href="#">查看更多</a>
+		</div>
+		
+	</div>
+		
+	<footer class="box bw">
+		<div class="download">
+			<a href="#" class="download_btn">
+				<img src="../img/phone.png" alt="">
+				<span>客户端下载</span>
+			</a>
+		</div>
+		<p class="footer_title">客服</p>
+		<div class="footer_message clear">
+			<div class="f_m_left fl">
+				<p>
+					<span>工作时间：周一到周五9:00-18:00</span>
+					<span>客服邮箱：354654364@qq.com</span>
+					<span>客服QQ：354654364</span>
+					<span>微信公众号：超阅小说</span>
+				</p>
+			</div>
+			<div class="f_m_right fr">
+				<img src="../img/weixin.png" alt="">
+			</div>
+		</div>
+	</footer>
+
+	<!-- 弹层 -->
+	<div class="mask">
+	</div>
+	<!-- 包月订购弹窗 -->
+	<!-- 删除确认 -->
+	<div class="dele_sure box">
+		<p>确定购买？</p>
+		<span class="dele_sure_no">取消</span>
+		<span class="dele_sure_yes">确定</span>
+	</div>
+
+
+<!-- 加入书架弹窗 -->
+	<div class="small_tip">
+		购买成功
+	</div>
+
+	
+</body>
+<script src="../plugIn/libflexible/flexible.debug.js"></script>
+ <script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script>
+	$(function(){
+		// footer下载
+		var downbtn=$('.download_btn');
+		var btnnum=downbtn.length;
+		console.log(btnnum);
+		if (btnnum==1) {
+			$('footer .download a').css('width','100%')
+		} else if(btnnum==2){
+			downbtn.css('width','40%')
+		}
+
+
+		function test(){
+			$('.small_tip').animate({
+				opacity:'0'
+			},3000);
+		}
+		$('.go_read a:eq(1)').click(function(){
+			$(this).text('已在书架');
+			$(this).css('color',"#b8b8b8");
+			$('.small_tip').animate({
+				opacity:'0.9'
+			},1500,test)
+
+		})
+
+		// 包月订购弹窗
+		
+
+		$('.Monthly_order').click(function(){
+			$('.dele_sure').show();
+			$('.mask').show()
+		})
+		$('.dele_sure_no').click(function(){
+			$('.dele_sure').hide();
+			$('.mask').hide();
+		})
+
+		var timer;
+		function hide(){
+			$('.small_tip').hide('1000')
+		}
+		function show(){
+			$('.small_tip').show("1500");
+		}
+		$('.dele_sure_yes').click(function(){
+			$('.mask').hide();
+			$(this).parent().hide();
+			show();
+			timer=setTimeout(hide,1000)
+		})
+
+
+
+
+
+	})
+
+</script>
+</html>

@@ -1,0 +1,477 @@
+﻿/*@charset "utf-8";*/
+/*公用样式*/
+
+
+/*body{ font-family:"\5FAE\8F6F\96C5\9ED1", Helvetica;font-size:17px; color:#000; background:#f6f6f6;-webkit-text-size-adjust: none;-webkit-user-select: none; line-height:150%;}
+body,ul,li{margin:0;padding:0}
+ul,ol{list-style:none}*/
+
+/*栏目条*/
+.mainlistsbox {
+	overflow:hidden;
+	margin:0 auto;
+}
+.topDown{
+	padding:9px 20px;
+	height: 53px;
+	border-bottom: 1px solid #eaeaea;
+	background: #fff;
+}
+.topDown img{
+	width: 53px;
+	float: left;
+}
+html{
+	height:auto;
+	min-height: 100%;
+	position: relative;
+}
+body{
+	height:100%;
+}
+.listenWrap{
+	width:100%;
+	height: 100%;
+}
+
+.cdBox{
+	width:6.44rem;
+	height:6.44rem;
+	margin:1.0rem auto 0;
+	position:relative;
+	
+}
+.coverBox{    
+	width:6.44rem;
+	height:6.44rem;
+	margin:auto;
+	overflow: hidden;
+	/* margin: 17px; 
+	 padding: 2px; */
+	 /*border: 1px solid #b0b0b0;*/
+    border-radius: 0.08rem; 
+    -webkit-border-radius: 0.08rem;
+    -webkit-box-shadow: #807D7D 0 0.03rem 0.16rem;
+    -moz-box-shadow: #807D7D 0px 0.03rem 0.16rem; 
+    box-shadow: #807D7D 0px 0.03rem 0.16rem;
+    position:relative;
+}
+.coverBox img{
+	width: 100%;
+	height: auto;
+	border-radius: 0.08rem;
+	-webkit-border-radius: 0.08rem;
+	position:relative;
+}
+.origin {
+	-webkit-transform: rotate(23deg);
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out ;
+	-moz-transition: all 0.5s ease-in-out ;
+	transition: all 0.5s ease-in-out;
+}
+
+.cdText{  
+ 	width: 80%;  
+	font-size:0.47rem;
+    color: #fff;
+    text-align: center;
+   	margin: 1.15rem auto  1.2rem;
+  	position: relative;
+    z-index: 10;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.controlBox{
+    width: 100%;
+    height:auto;
+    padding-top: 0.19rem;
+}
+#playContent{
+	
+    font-size:0.41rem;
+	color: #666;
+	position: relative;
+	width: 100%;
+	z-index: 50;
+	/*top: -50px;*/
+}
+#currentTime { 
+	float: left;
+	margin-left: 0.16rem;
+}
+#totleTime { 
+	float: right;
+	margin-right: 0.16rem;
+}
+.timeBox{
+	overflow: hidden;
+	/*height:0.39rem;*/
+	color:#fff;
+	padding-top: 0.16rem;
+}
+#progressWrap{
+	height:0.06rem;
+	width: 100%;
+	background: #dbdbdb;
+	position: relative;
+}
+#progress{
+	background: #ff5c4d;
+	height:0.06rem;
+	position: absolute;
+	width: 0;top: 0;
+	left: 0;
+	display: none;
+}
+#progress:after{
+	content: "";
+	position: absolute;
+	width:0.1rem;
+	background: #ff5c4d;
+	height:0.25rem;
+	top:-0.09rem;
+	right:-0.1rem;
+}
+.controlBox ul{
+    overflow: hidden;
+    position: relative;
+    z-index: 55;
+    margin-top: 1.05rem;
+   /* margin-top: -1.8rem;*/
+}
+.controlBox .playbg{
+	
+}
+.controlBox li{
+    float: left;
+    text-align: center;
+    width:20%;
+   
+}
+.controlBox a{
+	width:1.40rem;
+	height:1.40rem;
+	display: inline-block;
+	margin: auto;
+}
+
+
+.controlBox a.toDetail{
+	background:url(../../img/listenimg/todetail.png) no-repeat;    
+	background-size:0.6rem 0.6rem;
+    background-position:center center;
+}
+
+.controlBox a.toDirectory{
+
+	background:url(../../img/listenimg/todetaillist.png) no-repeat;    
+	background-size:0.6rem 0.6rem;
+    background-position:center center;
+}
+
+.controlBox a.pause{
+	background:url(../../img/listenimg/out.png) no-repeat;    
+	background-size:0.45rem 0.56rem;
+    background-position:center center;
+}
+
+.controlBox .playbg{
+	/*width: 1.40rem;*/
+	height: 1.40rem;
+	/*margin:0 0.3rem;*/
+    text-align: center;
+    background: url(../../img/listenimg/playbg.png) no-repeat;
+    background-size:1.41rem 1.41rem;
+    background-position:center center;
+}
+.controlBox a.play{
+	width: 1.40rem;
+	height: 1.40rem;
+	
+	background:url(../../img/listenimg/play.png) no-repeat;
+	background-size:0.45rem 0.56rem;
+    background-position:0.495rem center;
+	
+}
+.controlBox a.next{
+	background:url(../../img/listenimg/next_1.png) no-repeat 50%;
+	background-size:0.73rem 0.73rem;
+    background-position:center center;
+    cursor: pointer;
+}
+.controlBox a.prev{
+	background:url(../../img/listenimg/last_1.png) no-repeat 50%; 
+	background-size:0.73rem 0.73rem;
+    background-position:center center;
+    cursor: pointer; 
+} 
+.gray{opacity: 0.8}
+
+
+
+.ListenImageBox{
+ 	display: block;
+ 	width:2.81rem;
+ 	height: 2.81rem;
+ 	-webkit-box-shadow:0.078125rem 0.078125rem 0.078125rem #e1e1e1;  
+  	-moz-box-shadow:0.078125rem 0.078125rem 0.078125rem  #e1e1e1;  
+  	box-shadow: 0.078125rem 0.078125rem 0.078125rem #e1e1e1;
+	overflow: hidden;
+	position: relative;
+ }
+ .ListenImageBox .ListenImage{
+	width: 100%;
+ 	height: auto;
+ 	-webkit-box-shadow:none;
+  	-moz-box-shadow:none;  
+  	box-shadow: none;
+  	position: relative;
+  	margin: 0;
+}
+
+
+
+
+.blur{
+	position: absolute;
+	top:0;
+	width:100%;
+	height: 100%;
+	/*overflow: hidden;*/
+}
+
+
+.blur img{
+	width: 100%;
+	height: 100%;
+	 -webkit-filter: blur(30px); 
+       -moz-filter: blur(30px);
+        -ms-filter: blur(30px);    
+            filter: blur(30px);   
+            position: absolute;
+}
+.blur p{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	overflow: hidden;
+	background-color: #000;
+	opacity: 0.3;
+	/*position: relative;*/
+	/*z-index: 2;*/
+}
+header{
+	background-color: transparent;
+	z-index: 2;
+	color:#fff;
+}
+
+
+
+
+
+
+
+.listen-directory-mask{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color:transparent;
+	z-index: 100;
+	display: none;
+}
+
+.listen-directory-mask .bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	z-index: 101;
+}
+
+.listen-directory-mask .listen-directory-list{
+	width:100%;
+	/*height:9.06rem;*/
+	background-color: #fff;
+	position: absolute;
+	bottom:0;
+	z-index: 102;
+}
+
+
+.listen-directory-list p{
+	height: 1.17rem;
+	border-bottom: 1px solid #e6e6e6;
+	line-height: 1.17rem;
+	overflow: hidden;
+	padding: 0 0.31rem;
+	font-size:0.4rem;
+
+}
+
+.nowplay{
+	margin-left:0.31rem;
+}
+.nowplay img{
+	display: inline-block;
+	height: 0.4rem;
+	vertical-align: top;
+	margin-top:0.42rem;
+	cursor: pointer;
+}
+
+
+.cur{
+	cursor: pointer;
+}
+
+
+/*.listen-directory-list .listen-charpter-ulwrap{
+	height: 6.56rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+}
+.listen-directory-list ul{
+	padding-left: 0.31rem;
+	
+}
+.listen-directory-list ul li{
+	height: 1.09rem;
+	line-height: 1.09rem;
+	color: #353535;
+	border-bottom: 1px solid #e6e6e6;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	cursor: pointer;
+}
+.listen-directory-list ul li span{
+	display: inline-block;
+	max-width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 0.375rem;
+}
+.listen-directory-list ul li img{
+	display: inline-block;
+
+	height: 0.35rem;
+	vertical-align: top;
+	margin-top:0.38rem;
+	cursor: pointer;
+}
+
+
+*/
+
+.listen-directory-list .isPlay{
+	color:#ff5e4f;
+	background: url(../../img/listenimg/newmusic.gif) no-repeat;
+	background-size: 0.4rem 0.375rem;
+	background-position: 0 0.35rem;
+	padding-left: 0.7rem;
+}
+
+
+
+
+
+
+/*详情页*/
+.directory{
+	height: 6.56rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.directory ul{
+	padding-left: 0.31rem;
+}
+
+.directory li{
+/*
+	height: 1.09rem;
+	line-height: 1.09rem;
+	color: #353535;*/
+	border-bottom: 1px solid #e6e6e6;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	cursor: pointer;
+
+
+
+/*	height: 1.25rem;
+	border-bottom:1px solid #e3e3e3;
+	cursor: pointer;*/
+}
+
+.directory li a{
+	display: block;
+	height: 1.25rem;
+	line-height: 1.25rem;
+	color:#555;
+}
+.directory li a{
+	
+	width:100%;
+	height: 1.25rem;
+	cursor: pointer;
+	color:#555;
+	font-size: 0.375rem;
+
+}
+.directory li a span{
+	display: inline-block;
+	max-width: 90%;
+	margin:0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+
+}
+
+.directory ul li a img{
+	display: inline-block;
+	height: 0.35rem;
+	vertical-align: top;
+	margin-top:0.45rem;
+	cursor: pointer;
+}
+
+
+
+
+.listen-detail-list{
+	margin-top: 0.05rem;
+}
+
+
+
+
+
+
+.listen-directory-list .close{
+	display: block;
+	height: 1.41rem;
+	line-height: 1.41rem;
+	color:#fff;
+	text-align: center;
+	background-color:#FF5E4F;
+	font-size: 0.45rem;
+}
+
+
+
+
+

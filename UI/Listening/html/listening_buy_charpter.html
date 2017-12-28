@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../../plugIn/libflexible/flexible_css.debug.js"></script>
+    
+	<!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+	<title>听书购买章节</title>
+	<link rel="stylesheet" href="../css/common.css">
+	
+	<link rel="stylesheet" href="../css/comic.css">
+<link rel="stylesheet" type="text/css" href="../css/buying.css">
+</head>
+<body class="bw">
+	<header class="common_detail box clear ">
+		<a class="back" href="#" title="">
+			<img src="../css/img/backblack.png" alt="">
+		</a>
+		<p>解二等分GV而被忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店解忧杂货店</p>
+		<div class=" fr box">
+			<a href="#"><img src="../css/img/house.png" alt=""></a>
+			<a href="#"><img src="../css/img/bookcase1.png" alt=""></a>
+		</div>
+	</header>
+	<div class="buying box">
+		<div class="buy_head clear box bw">
+			<img src="../css/img/comic.png" alt="">
+			<p>本章是VIP专属哦</p>
+			<p>请支持作者，支持正版！</p>
+			
+		</div>
+			
+		<div class="change_status_1">
+
+			<div class="top_up_rechagre box">
+				<a class="top_up_rechagre_btn" href="#">购买本章<span>（26米粒）</span></a>
+				
+			</div>
+		
+			<!-- 购买章节 -->
+			<div class="clear buy_charpter_account box">
+				<p class="fl">账户余额：<span>0</span>&nbsp;米粒</p>
+				<a class="fr" href="#">购买全本<img src="../css/img/backred.png" alt=""></a>
+			</div>
+			
+			<!-- 购买全本 -->
+			<div class="buy_complete_des">
+				<p><span class="box olcircle"></span>后续VIP章节购买不再提醒</p>
+				<p><span class="box olcircle"></span>已购买章节不会重复购买</p>
+				<p><span class="box olcircle"></span>资费说明：千字5米粒</p>
+				
+			</div>
+		</div>
+		
+	</div>
+	
+	
+<!-- 弹层 -->
+	<div class="mask">
+	</div>
+	<!-- 提醒登录弹窗 -->
+	<!-- <div class="warn_login box">
+		<img class="warn_login_close" src="../img/close_login.png" alt="">
+		<p class="">对不起，你需要登录才能使用此功能</p>
+		<a href="#">立即登录</a>
+	</div> -->
+
+	<!-- 余额不足时提示充值 -->
+	<div class="Prompt_top_up box clear">
+		<img class="Prompt_close fr" src="../css/img/close_login.png" alt="">
+		<p class="book_name">《解忧杂货店》</p>
+		<p class="old_price">全书原价：<span>50米粒</span></p>
+		<p class="now_price">全本价格：<span class="price_num">26</span>米粒 </p>
+		<p class="account_residue">账户余额：<span  class="price_num">0</span>米粒</p>
+
+		<a class="top_up_rechagre_btn" href="#">购买全本</a>
+		
+		<p><span class="box olcircle"></span>已购买书籍不会重复购买</p>	
+	</div>
+
+
+
+	<!-- 加入书架弹窗 -->
+	<div class="small_tip">
+		已在书架
+	</div>
+
+</body>
+<script src="../../plugIn/libflexible/flexible.debug.js"></script>
+ <script src="../../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../../js/jquery.min.js" type="text/javascript"></script>
+<script>
+	$(function(){
+		// 购买全本 余额充足，提示购买成功
+		var timer;
+		function hide(){
+			$('.small_tip').hide('1000')
+		}
+		function show(){
+			$('.small_tip').show("1500");
+		}
+		$('.top_up_rechagre_btn').click(function(){
+			$('.mask').hide();
+			$('.Prompt_top_up').hide();
+			$('.small_tip').text('购买成功');
+			show();
+			timer=setTimeout(hide,1000)
+		})
+
+
+		// 余额不足时，提示充值
+		$('.buy_charpter_account a').click(function(){
+			$('.mask').show();
+			$('.Prompt_top_up').show();
+		})
+		$('.Prompt_close').click(function(){
+			$('.mask').hide();
+			$('.Prompt_top_up').hide();
+		})
+
+
+})
+
+</script>
+</html>

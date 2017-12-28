@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<script src="../plugIn/libflexible/flexible_css.debug.js"></script>
+
+	<!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+	<title>漫画正文</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/buying.css">
+	<link rel="stylesheet" href="../css/comic.css">
+</head>
+<body>
+	<header class="common_detail box clear comic_buying">
+		<a class="back" href="#" title="">
+			<img src="../img/arrow_right.png" alt="">
+		</a>
+		<p>漫画正文贷款为贫困分配我看个贫困GV而顾客
+		</p>
+		<div class=" fr box">
+			<a href="#"><img src="../img/house1.png" alt=""></a>
+			<a href="#"><img src="../img/bookcase2.png" alt=""></a>
+		</div>
+	</header>
+
+
+
+
+
+	<div class="comic_body box">
+		<!-- 点击加载上一张 -->
+		<div class="change_comicharpter pre_charpter box bw">
+			<a href="#">点击加载上一章</a>
+		</div>
+
+		<img src="../upload/comicbg.png" alt="">
+		<img src="../upload/comicbg.png" alt="">
+
+		<!-- 点击加载下一张 -->
+		<div class="change_comicharpter next_charpter box bw">
+			<a href="#">点击加载下一章</a>
+		</div>
+
+	</div>
+
+
+
+    <div class="ch_price">
+        本章价格：40米粒
+    </div>
+
+	<div class="comic_change_charpeter box bw">
+		<ol class="clear">
+			<!-- <li class="fl"><a class="box txtcolor" href="#">上一章</a></li>
+			<li class="fl"><a class="box charptercolor" href="#">目录</a></li>
+			<li class="fl"><a class="box charptercolor" href="#">下一章</a></li> -->
+
+            <!-- 底部重新修改部分 -->
+            <li class="charpeter_prev">
+                <a href="#">
+                    <i></i>
+                    <span>上一章</span>
+                </a>
+            </li>
+            <li class="charpeter_details">
+                <a href="#">
+                    <i></i>
+                    <span>详情</span>
+                </a>
+            </li>
+            <li class="charpeter_contents">
+                <a href="#">
+                    <i></i>
+                    <span>目录</span>
+                </a>
+            </li>
+            <li class="charpeter_collection">
+                <a href="#">
+                    <i></i>
+                    <span>收藏</span>
+                </a>
+            </li>
+            <li class="charpeter_next">
+                <a href="#">
+                    <i></i>
+                    <span>下一章</span>
+                </a>
+            </li>
+            <!-- END -->
+		</ol>
+	</div>
+
+
+</body>
+<script src="../plugIn/libflexible/flexible.debug.js"></script>
+ <script src="../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(function () {
+
+        // 屏幕滚轮事件
+        var bol = true;
+        $(window).scroll(function (event) {
+            event.stopPropagation();
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (scrollTop >0) {
+                bol = false;
+                $('header').hide();
+                $('.comic_change_charpeter').hide();
+                $('.comic_body').css({
+                    'marginTop': 0
+                })
+                $('.comic_body .pre_charpter').css({
+                    'marginTop': '0'
+                })
+            }
+        })
+
+        $('.comic_body').click(function (event) {
+            event.stopPropagation();
+            var that = $(this);
+            if (that.attr('data') || bol == false) {
+                $(this).removeAttr('data');
+                bol = true;
+                $('header').show();
+                $('.comic_change_charpeter').show();
+                $('.comic_body').css({
+                    'marginTop': '1.25rem'
+                })
+                $('.comic_body .pre_charpter').css({
+                    'marginTop': '-1.25rem'
+                })
+
+            } else if (bol == true || !that.attr('data')) {
+                $(this).attr('data', 'clicked');
+                bol == false;
+                $('header').hide();
+                $('.comic_change_charpeter').hide();
+                $('.comic_body').css({
+                    'marginTop': 0
+                })
+                $('.comic_body .pre_charpter').css({
+                    'marginTop': '0'
+                })
+            }
+
+        })
+        setTimeout(function () {
+            $(".ch_price").hide();
+        }, 2000);
+
+
+    })
+
+
+</script>
+</html>

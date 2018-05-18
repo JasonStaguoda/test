@@ -1,0 +1,153 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<meta name= "robots" content= "all">
+		<meta name= "keywords" content= "">
+		<meta name= "description" content= "">
+		<meta name= "author" content= "F">
+		<!-- 移动端meta -->
+		<meta name= "format-detection" content= "telphone=no, email=no">
+		<meta http-equiv= "Cache-Control" content= "no-transform">
+		<meta name= "apple-touch-fullscreen" content= "yes">
+		<meta name= "apple-mobile-web-app-capable" content= "yes">
+		<meta name= "apple-mobile-web-app-status-bar-style" content= "black-translucent">
+		<title>详情-评论</title>
+		<script src="js/flexible.js"></script>
+		<link rel= "shortcut icon" type= "image/x-icon" href= "">
+		<link rel= "stylesheet" href= "css/public.css">
+		<link rel= "stylesheet" href= "css/details.css">
+	</head>
+
+	<body class="details-comment">
+		<ul class="details-public-comment">
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/avatar.png" alt="">
+				<div class="details-public-comment-cont">
+					<p>小杨</p>
+					<p>2018-01-18 18:08:08</p>
+					<p>这本书太棒了！打赏50书币，希望后续更加精彩！</p>
+				</div>
+			</li>
+		</ul>
+		<p id="details-write-comment" class="details-comment-write">写评论</p>
+		<div id="details-public-publish" class="details-public-publish">
+			<div id="details-public-publish-holder" class="details-public-publish-holder"></div>
+			<div class="details-public-publish-cont">
+				<textarea placeholder="文明看书，理性发言~" maxlength="200" autofocus required></textarea>
+				<button type="button">发表评论</button>
+				<p>请正确填写评论</p>
+			</div>
+		</div>
+
+		<script>
+			window.onload = function() {
+				openCloseCommentLayer();
+				commentSubmit();
+			}
+			d_open = document.getElementById("details-write-comment");
+			d_layer = document.getElementById("details-public-publish");
+			d_holder = document.getElementById("details-public-publish-holder");
+			d_input = d_layer.getElementsByTagName("textarea")[0];
+			d_submit = d_layer.getElementsByTagName("button")[0];
+			d_tips = d_layer.getElementsByTagName("p")[0];
+			function openCloseCommentLayer() {
+				d_open.onclick = function() {
+					d_layer.style.display = "block";
+					document.body.style.overflow = "hidden";
+				}
+				d_holder.onclick = function() {
+					d_layer.style.display = "";
+					document.body.style.overflow = "";
+				}
+			}
+			function commentSubmit() {
+				d_submit.onclick = function() {
+					var value = d_input.value;
+					if (value.replace(/\s+/g, "") === "") {
+						d_tips.style.display = "block";
+						return;
+					}
+					alert(value);  // 取到数据
+					d_tips.style.display = "";
+					d_input.value = "";
+					d_layer.style.display = "";
+					document.body.style.overflow = "";
+				}
+			}
+		</script>
+	</body>
+</html>

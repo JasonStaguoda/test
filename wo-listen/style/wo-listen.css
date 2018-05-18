@@ -839,6 +839,30 @@ body {
 	background: url(icons/free_label.png) no-repeat;
 	background-size: contain;
 }
+.details_buy_book {
+	display: none;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: red;
+	background-color: rgba(0, 0, 0, .66);
+}
+.details_buy_book .play_popup_send,
+.details_buy_book_show {
+	display: block;
+}
+.details_buy_book_info {
+	padding: .16rem .2rem .1rem .2rem;
+	line-height: .4rem;
+	font-size: .24rem;
+	letter-spacing: .01rem;
+}
+.details_buy_book_info span {
+	padding: 0 .03rem;
+}
 /*详情页相关 end*/
 
 /*播放页相关*/
@@ -1769,6 +1793,46 @@ body {
 }
 /*收听、购买、包月记录 end*/
 
+/*包月购买*/
+.monthly_buy {
+	font-size: .24rem;
+	letter-spacing: .01rem;
+}
+.monthly_buy_info {
+	padding: .3rem .12rem .2rem .12rem;
+	line-height: .42rem;
+	color: #1f2021;
+	border-bottom: #dbdbdb dashed 1px;
+}
+.monthly_buy_method {
+	line-height: .64rem;
+	text-indent: .12rem;
+	color: #808080;
+}
+.monthly_buy_method span {
+	padding: 0 .03rem;
+	color: #168cfa;
+}
+.monthly_buy_button {
+	display: block;
+	margin: .6rem auto 0 auto;
+	width: 4.8rem;
+	line-height: .64rem;
+	font-size: .28rem;
+	text-align: center;
+	color: #FFF;
+	background-color: #f8a624;
+	border-radius: .08rem;
+	letter-spacing: .02rem;
+}
+.monthly_buy_tip {
+	line-height: .64rem;
+	text-align: center;
+	font-size: .22rem;
+	color: #808080;
+}
+/*包月购买 end*/
+
 
 /*不同dpr下字体大小处理*/
 [data-dpr= "2"] .book_int_info_tit,
@@ -1940,7 +2004,8 @@ body {
 [data-dpr= "2"] .ranking_first3_switch_wrap,
 [data-dpr= "2"] .ranking_first3_switch a,
 [data-dpr= "2"] .user_sign_out,
-[data-dpr= "2"] .gotop {
+[data-dpr= "2"] .gotop,
+[data-dpr= "2"] .monthly_buy_info {
 	border-width: 2px;
 }
 [data-dpr= "3"] .bb_f2,
@@ -1951,7 +2016,8 @@ body {
 [data-dpr= "3"] .ranking_first3_switch_wrap,
 [data-dpr= "3"] .ranking_first3_switch a,
 [data-dpr= "3"] .user_sign_out,
-[data-dpr= "3"] .gotop {
+[data-dpr= "3"] .gotop,
+[data-dpr= "3"] .monthly_buy_info {
 	border-width: 3px;
 }
 [data-dpr= "2"] .recharge_money li {

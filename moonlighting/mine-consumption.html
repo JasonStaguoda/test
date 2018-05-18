@@ -1,0 +1,144 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<meta name= "robots" content= "all">
+		<meta name= "keywords" content= "">
+		<meta name= "description" content= "">
+		<meta name= "author" content= "F">
+		<!-- 移动端meta -->
+		<meta name= "format-detection" content= "telphone=no, email=no">
+		<meta http-equiv= "Cache-Control" content= "no-transform">
+		<meta name= "apple-touch-fullscreen" content= "yes">
+		<meta name= "apple-mobile-web-app-capable" content= "yes">
+		<meta name= "apple-mobile-web-app-status-bar-style" content= "black-translucent">
+		<title>个人中心-打赏记录</title>
+		<script src="js/flexible.js"></script>
+		<link rel= "shortcut icon" type= "image/x-icon" href= "">
+		<link rel= "stylesheet" href= "css/public.css">
+		<link rel= "stylesheet" href= "css/mine.css">
+	</head>
+
+	<!-- mine-reward 打赏记录 || mine-subscription 书刊订阅 -->
+	<body class="mine-consumption mine-reward">
+		<ul class="public-nav clearfix">
+			<li class="public-nav-index">
+				<a href="index.html"><i></i><p>首页</p></a>
+			</li>
+			<li class="public-nav-library">
+				<a href="library.html"><i></i><p>书库</p></a>
+			</li>
+			<li class="public-nav-recharge">
+				<a href="recharge.html"><i></i><p>充值</p></a>
+			</li>
+			<li class="public-nav-rank">
+				<a href="rank.html"><i></i><p>排名</p></a>
+			</li>
+			<li class="public-nav-mine">
+				<a href="mine.html"><i></i><p>我的</p></a>
+			</li>
+		</ul>
+		<div class="mine-consumption-tit clearfix">
+			<p id="mine-reward-tit" class="mine-reward-tit" href="mine-reward.html">打赏记录</p>
+			<p id="mine-subscription-tit" class="mine-subscription-tit" href="mine-subscription.html">书刊订阅</p>
+		</div>
+		<ul class="mine-consumption-list mine-reward-list">
+			<li class="clearfix">
+				<a href="#">
+					<div class="mine-consumption-list-l">
+						<p>《总裁的专属甜心》</p>
+					</div>
+					<div class="mine-consumption-list-r">
+						<p>火箭*8</p>
+						<p>2018-08-08 18:18</p>
+					</div>
+				</a>
+			</li>
+			<li class="clearfix">
+				<a href="#">
+					<div class="mine-consumption-list-l">
+						<p>《总裁的专属甜心》</p>
+					</div>
+					<div class="mine-consumption-list-r">
+						<p>火箭*8</p>
+						<p>2018-08-08 18:18</p>
+					</div>
+				</a>
+			</li>
+			<li class="clearfix">
+				<a href="#">
+					<div class="mine-consumption-list-l">
+						<p>《总裁的专属甜心》</p>
+					</div>
+					<div class="mine-consumption-list-r">
+						<p>火箭*8</p>
+						<p>2018-08-08 18:18</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="mine-consumption-list mine-subscription-list">
+			<li class="clearfix">
+				<a href="#">
+					<div class="mine-consumption-list-l">
+						<p>《总裁的专属甜心》</p>
+						<p>第345章 大结局</p>
+					</div>
+					<div class="mine-consumption-list-r">
+						<p>80书券</p>
+						<p>2018-08-08 18:18</p>
+					</div>
+				</a>
+			</li>
+			<li class="clearfix">
+				<a href="#">
+					<div class="mine-consumption-list-l">
+						<p>《总裁的专属甜心》</p>
+						<p>第345章 大结局</p>
+					</div>
+					<div class="mine-consumption-list-r">
+						<p>80书券</p>
+						<p>2018-08-08 18:18</p>
+					</div>
+				</a>
+			</li>
+			<li class="clearfix">
+				<a href="#">
+					<div class="mine-consumption-list-l">
+						<p>《总裁的专属甜心》</p>
+						<p>第345章 大结局</p>
+					</div>
+					<div class="mine-consumption-list-r">
+						<p>80书券</p>
+						<p>2018-08-08 18:18</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<script src="js/public.js"></script>
+		<script>
+			window.onload = function() {
+				listSwitching();
+			}
+			// 列表切换
+			r_btn = document.getElementById("mine-reward-tit");
+			s_btn = document.getElementById("mine-subscription-tit");
+			body = document.body;
+			title = document.getElementsByTagName("title")[0];
+			function listSwitching() {
+				r_btn.onclick = function() {
+					delClass(body, "mine-subscription");
+					addClass(body, "mine-reward");
+					title.innerHTML = "个人中心-打赏记录";
+				}
+				s_btn.onclick = function() {
+					delClass(body, "mine-reward");
+					addClass(body, "mine-subscription");
+					title.innerHTML = "个人中心-书刊订阅";
+				}
+			}
+		</script>
+	</body>
+</html>

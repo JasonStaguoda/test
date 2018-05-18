@@ -52,8 +52,8 @@
 				</div>
 				<div class="details_operating_wrap">
 					<div class="details_operating clearfix">
-						<a class="details_operating_item" href="#">包月购买</a>
-						<a class="details_operating_item" href="#">整本购买</a>
+						<a class="details_operating_item" href="monthly-buy.html">包月购买</a>
+						<a id="details_buy_one" class="details_operating_item">整本购买</a>
 						<a class="details_operating_item strat_listen" href="#"> 开始收听</a>
 					</div>
 				</div>
@@ -113,6 +113,15 @@
 						<a href="javascript:loadBooks()">点击查看更多</a>
 					</p>
 				</div>
+			</div>
+		</div>
+		<!-- 添加 details_buy_book_show 类名，单本购买确认框弹出 -->
+		<div id="details_buy_book" class="details_buy_book">
+			<div id="details_buy_book_holder" class="close_holder"></div>
+			<div class="play_popup_send">
+				<p class="play_popup_send_tit"><i id="details_buy_book_close" class="module_tit_close"></i>按本购买</p>
+				<p class="details_buy_book_info">您正在购买《<span>神仙煞仙</span>》，需要扣掉<span>2</span>元，您确认购买吗？</p>
+				<button id="details_buy_book_sure" class="play_popup_submit" type="button">确认购买</button>
 			</div>
 		</div>
 		<em id="gotop" class="gotop">Top</em>

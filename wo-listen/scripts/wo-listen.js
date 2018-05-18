@@ -1,4 +1,4 @@
-﻿
+
 // 兼容IOS点击反馈的active伪类
 document.body.addEventListener('touchstart', function () { });
 
@@ -154,6 +154,34 @@ function controlIntroduction() {  // 详情页作品简介的展示和收拢
 	}
 }
 
+addLoadEvent(buyOnlyOne);
+function buyOnlyOne() {  // 详情页，单本购买
+	var button = document.getElementById("details_buy_one");
+	var sure_box = document.getElementById("details_buy_book");
+	if (!button || !sure_box) return;
+	var body = document.body;
+	var holder = document.getElementById("details_buy_book_holder");
+	var close = document.getElementById("details_buy_book_close");
+	var sure = document.getElementById("details_buy_book_sure");
+
+	button.onclick = function() {
+		addClass(sure_box, "details_buy_book_show");
+		body.style.overflow = "hidden";
+	}
+	holder.onclick = function() {
+		delClass(sure_box, "details_buy_book_show");
+		body.removeAttribute("style");
+	}
+	close.onclick = function() {
+		delClass(sure_box, "details_buy_book_show");
+		body.removeAttribute("style");
+	}
+	sure.onclick = function() {
+		delClass(sure_box, "details_buy_book_show");
+		body.removeAttribute("style");
+	}
+}
+
 addLoadEvent(danmuControl);
 function danmuControl() {  // 弹幕开关控制
 	var dm_button = document.getElementById("danmu_button");
@@ -281,7 +309,7 @@ function classificationModuleFixed() {  // 分类页面 选择分类模块相关
 	var box_originally_height = box.clientHeight;  // 取到展开状态下的元素高度
 	box.style.height = box_originally_height + "px";  // 并设置高度（为了过度动画）
 
-	if (book_list.clientHeight + box_fold_height > document.documentElement.clientHeight) {  // 当元素高度不够时，不折叠，否则有BUG
+	if (book_list.clientHeight + box_fold_height > 0) {  // 当元素高度不够时，不折叠，否则有BUG
 		window.onscroll = function() {  // 当页面滚动时
 			var box_top = box.getBoundingClientRect().top;  // 取到元素与浏览器窗口顶部的距离
 			if (box_top <= 0) {  // 如果到达窗口顶部（往上拉）

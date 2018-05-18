@@ -1,0 +1,149 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<meta name= "robots" content= "all">
+		<meta name= "keywords" content= "">
+		<meta name= "description" content= "">
+		<meta name= "author" content= "F">
+		<!-- 移动端meta -->
+		<meta name= "format-detection" content= "telphone=no, email=no">
+		<meta http-equiv= "Cache-Control" content= "no-transform">
+		<meta name= "apple-touch-fullscreen" content= "yes">
+		<meta name= "apple-mobile-web-app-capable" content= "yes">
+		<meta name= "apple-mobile-web-app-status-bar-style" content= "black-translucent">
+		<title>个人中心-最近阅读</title>
+		<script src="js/flexible.js"></script>
+		<link rel= "shortcut icon" type= "image/x-icon" href= "">
+		<link rel= "stylesheet" href= "css/public.css">
+		<link rel= "stylesheet" href= "css/mine.css">
+	</head>
+
+	<!-- mine-read-book 最近阅读 || mine-collection-book 我的收藏 -->
+	<body class="mine-record mine-read">
+		<ul class="public-nav clearfix">
+			<li class="public-nav-index">
+				<a href="index.html"><i></i><p>首页</p></a>
+			</li>
+			<li class="public-nav-library">
+				<a href="library.html"><i></i><p>书库</p></a>
+			</li>
+			<li class="public-nav-recharge">
+				<a href="recharge.html"><i></i><p>充值</p></a>
+			</li>
+			<li class="public-nav-rank">
+				<a href="rank.html"><i></i><p>排名</p></a>
+			</li>
+			<li class="public-nav-mine">
+				<a href="mine.html"><i></i><p>我的</p></a>
+			</li>
+		</ul>
+		<div class="mine-record-tit">
+			<p id="mine-read-tit" class="mine-read-tit">最近阅读(<span>3</span>)</p>
+			<p id="mine-collection-tit" class="mine-collection-tit">我的收藏(<span>3</span>)</p>
+		</div>
+		<ul class="mine-record-book mine-read-book">
+			<li>
+				<a href="#">
+					<img src="images/book-10.jpg" alt="">
+					<div class="mine-record-book-info">
+						<p class="mine-record-book-info-tit">《总裁的专属甜心》</p>
+						<p class="mine-record-book-info-sub">第345章 大结局</p>
+						<div class="mine-record-book-info-tips clearfix"><em class="continue-reading">继续阅读</em></div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/book-10.jpg" alt="">
+					<div class="mine-record-book-info">
+						<p class="mine-record-book-info-tit">《总裁的专属甜心》</p>
+						<p class="mine-record-book-info-sub">第345章 大结局</p>
+						<div class="mine-record-book-info-tips clearfix"><em class="continue-reading">继续阅读</em></div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/book-10.jpg" alt="">
+					<div class="mine-record-book-info">
+						<p class="mine-record-book-info-tit">《总裁的专属甜心》</p>
+						<p class="mine-record-book-info-sub">第345章 大结局</p>
+						<div class="mine-record-book-info-tips clearfix"><em class="continue-reading">继续阅读</em></div>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<ul id="mine-collection-book" class="mine-record-book mine-collection-book">
+			<li>
+				<a href="#">
+					<img src="images/book-10.jpg" alt="">
+					<div class="mine-record-book-info">
+						<p class="mine-record-book-info-tit">《总裁的专属甜心》</p>
+						<p class="mine-record-book-info-sub">第345章 大结局</p>
+						<div class="mine-record-book-info-tips clearfix"><em class="continue-reading">继续阅读</em><em class="cancel-collection">取消收藏</em></div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/book-10.jpg" alt="">
+					<div class="mine-record-book-info">
+						<p class="mine-record-book-info-tit">《总裁的专属甜心》</p>
+						<p class="mine-record-book-info-sub">第345章 大结局</p>
+						<div class="mine-record-book-info-tips clearfix"><em class="continue-reading">继续阅读</em><em class="cancel-collection">取消收藏</em></div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/book-10.jpg" alt="">
+					<div class="mine-record-book-info">
+						<p class="mine-record-book-info-tit">《总裁的专属甜心》</p>
+						<p class="mine-record-book-info-sub">第345章 大结局</p>
+						<div class="mine-record-book-info-tips clearfix"><em class="continue-reading">继续阅读</em><em class="cancel-collection">取消收藏</em></div>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<script src="js/public.js"></script>
+		<script>
+			window.onload = function() {
+				listSwitching();
+				cancelCollection();
+			}
+			// 列表切换
+			r_btn = document.getElementById("mine-read-tit");
+			c_btn = document.getElementById("mine-collection-tit");
+			body = document.body;
+			title = document.getElementsByTagName("title")[0]
+			function listSwitching() {
+				r_btn.onclick = function() {
+					delClass(body, "mine-collection");
+					addClass(body, "mine-read");
+					title.innerHTML = "个人中心-最近阅读";
+				}
+				c_btn.onclick = function() {
+					delClass(body, "mine-read");
+					addClass(body, "mine-collection");
+					title.innerHTML = "个人中心-我的收藏";
+				}
+			}
+			// 取消收藏
+			c_book = document.getElementById("mine-collection-book");
+			c_em = c_book.getElementsByClassName("cancel-collection");
+			c_num = document.getElementById("mine-collection-tit").getElementsByTagName("span")[0];
+			function cancelCollection() {
+				for (var i=0; i<c_em.length; i++) {
+					c_em[i].onclick = function() {
+						this.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode.parentNode);
+						c_num.innerHTML = Number(c_num.innerHTML)-1;
+						return false;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

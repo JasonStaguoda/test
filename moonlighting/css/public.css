@@ -1,0 +1,134 @@
+/*reset*/
+body, h1, h2, h3, h4, h5, h6, p,
+ul, ol, dl, dd, th, td,
+form, input, button, textarea, pre {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6, i, em {
+	font-size: inherit;
+	font-weight: normal;
+	font-style: normal;
+}
+input, button, textarea, img {
+	display: block;
+	border: none;
+	outline: none;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+/*移动端 reset*/
+body, input, button, textarea {
+	font: 14px/1 "Microsoft Yahei","Helvetica Neue",Helvetica;
+}
+a, button, input, textarea {
+	-webkit-tap-highlight-color: transparent;
+}
+input {
+	-webkit-appearance: none;
+}
+input[type=checkbox] {
+	-webkit-appearance: checkbox;
+}
+input::-webkit-input-speech-button {
+	display: none;
+}
+/*clearfix*/
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+body {
+	margin: 0 auto;
+	max-width: 7.5rem;
+}
+/*公共底部菜单*/
+.public-nav {
+	z-index: 1;
+	position: fixed;
+	bottom: 0;
+	width: 7.5rem;
+	height: 1rem;
+	background-color: #FFF;
+	box-shadow: 0 -.03rem .3rem #EEE;
+}
+.public-nav li {
+	float: left;
+	width: 1.5rem;
+	height: 100%;
+}
+.public-nav li a {
+	display: block;
+	height: 100%;
+}
+.public-nav li a p {
+	line-height: .31rem;
+	font-size: .24rem;
+	text-align: center;
+	letter-spacing: .02rem;
+	color: #7f7f7f;
+}
+.public-nav li a i {
+	display: block;
+	margin: 0 auto;
+	height: .39rem;
+	border-top: transparent solid .18rem;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.public-nav-index a i {
+	width: .38rem;
+	background-image: url(icons/nav/nav-index.png);
+}
+.public-nav-library a i {
+	width: .42rem;
+	background-image: url(icons/nav/nav-library.png);
+}
+.public-nav-recharge a p {
+	padding-top: .57rem;
+}
+.public-nav .public-nav-recharge a i {
+	position: absolute;
+	margin: -.46rem 0 0 .25rem;
+	width: .88rem;
+	height: .88rem;
+	border: #FFF solid .06rem;
+	border-radius: 50%;
+	background-image: url(icons/nav/nav-recharge.png);
+	box-shadow: 0 0 .5rem #DDD;
+}
+.public-nav-rank a i {
+	width: .42rem;
+	background-image: url(icons/nav/nav-rank.png);
+}
+.public-nav-mine a i {
+	width: .34rem;
+	background-image: url(icons/nav/nav-mine.png);
+}
+.index .public-nav-index i {
+	background-image: url(icons/nav/nav-index-now.png);
+}
+.library .public-nav-library i {
+	background-image: url(icons/nav/nav-library-now.png);
+}
+.rank .public-nav-rank i {
+	background-image: url(icons/nav/nav-rank-now.png);
+}
+.mine .public-nav-mine i,
+.mine-record .public-nav-mine i,
+.mine-consumption .public-nav-mine i {
+	background-image: url(icons/nav/nav-mine-now.png);
+}
+/*END*/

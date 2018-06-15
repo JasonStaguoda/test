@@ -1,0 +1,132 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="robots" content="all">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="author" content="FBY">
+		<!-- 移动端meta -->
+		<meta name="format-detection" content="telphone=no, email=no">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title>运书</title>
+		<script src="files/flexible.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="">
+		<link rel="stylesheet" href="files/public.css">
+		<style>
+			body {
+				background: #bbe6ff;
+				background: -webkit-linear-gradient(#b5eaff 18%, #fcf2ef);
+				background: -moz-linear-gradient(#b5eaff 18%, #fcf2ef);
+				background: linear-gradient(#b5eaff 18%, #fcf2ef);
+			}
+			.cont {
+				min-height: 12.3rem;
+			}
+			.cont:before {
+				top: 0;
+				right: 0;
+				width: 7.21rem;
+				height: 3rem;
+				background-image: url(images/mailing-book-1.png);
+			}
+			.cont:after {
+				bottom: 0;
+				width: 7.5rem;
+				height: 5.11rem;
+				background-image: url(images/mailing-book-2.png);
+			}
+			.holder {
+				height: 3.95rem;
+			}
+			.num-out {
+				position: relative;
+				margin: 0 auto;
+				width: 6.8rem;
+				height: .9rem;
+				background-color: #f2f2f2;
+				border: #FFF solid .1rem;
+				border-radius: .08rem;
+			}
+			.num-out:before {
+				content: "";
+				display: block;
+				z-index: 1;
+				position: absolute;
+				margin: -.44rem 0 0 .21rem;
+				width: 1.37rem;
+				height: 1.76rem;
+				background: url(images/mailing-book-3.png) left top no-repeat;
+				background-size: contain;
+			}
+			.num-in {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				width: 6.58rem;
+				height: .68rem;
+				border: #FFF solid .01rem;
+				border-radius: .04rem;
+			}
+			.num-in input {
+				float: left;
+				margin-left: 1.44rem;
+				width: 3.72rem;
+				line-height: .68rem;
+				font-size: .36rem;
+				text-align: center;
+				color: #333;
+				background-color: transparent;
+			}
+			.num-in button {
+				float: left;
+				margin: .09rem 0 0 .1rem;
+				width: 1.2rem;
+				height: .5rem;
+				font-size: .24rem;
+				color: #FFF;
+				background-color: #00c062;
+				border-radius: .08rem;
+			}
+			.sub {
+				margin-top: .9rem;
+				line-height: .45rem;
+				font-size: .26rem;
+				text-align: center;
+				color: #036484;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="cont">
+				<div class="holder"></div>
+				<div class="num-out">
+					<div class="num-in">
+						<input id="num-input" type="text" value="EM267045545CN"><button id="num-btn" type="button">复制单号</button>
+					</div>
+				</div>
+				<div class="sub">恭喜，您送给宝贝的阅读人生礼已经寄出了！<br>请复制快递单号到邮政官网查询寄送进度哦。</div>
+			</div>
+		</div>
+		<script>
+			input = document.getElementById("num-input");
+			btn = document.getElementById("num-btn");
+			window.onload = function() {
+				btn.onclick = function() {
+					input.select();
+					document.execCommand("Copy");
+					alert("已复制到剪贴板。");
+				}
+			}
+		</script>
+	</body>
+</html>

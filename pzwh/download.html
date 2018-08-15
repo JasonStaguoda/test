@@ -1,0 +1,257 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="robots" content="all">
+		<meta name="keywords" content="平治文学, 免费小说, 原创小说">
+		<meta name="description" content="平治文学APP下载站点。">
+		<meta name="author" content="FBY">
+		<!-- 移动端meta -->
+		<meta name="format-detection" content="telphone=no, email=no">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title>平治文学-下载</title>
+		<link rel="shortcut icon" type="image/x-icon" href="">
+		<script>
+			;(function(win, lib) {
+				var doc = win.document;
+				var docEl = doc.documentElement;
+				var metaEl = doc.querySelector('meta[name="viewport"]');
+				var flexibleEl = doc.querySelector('meta[name="flexible"]');
+				var dpr = 0;
+				var scale = 0;
+				var tid;
+				var flexible = lib.flexible || (lib.flexible = {});
+
+				if (metaEl) {
+					console.warn('将根据已有的meta标签来设置缩放比例');
+					var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+					if (match) {
+						scale = parseFloat(match[1]);
+						dpr = parseInt(1 / scale);
+					}
+				} else if (flexibleEl) {
+					var content = flexibleEl.getAttribute('content');
+					if (content) {
+						var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+						var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+						if (initialDpr) {
+							dpr = parseFloat(initialDpr[1]);
+							scale = parseFloat((1 / dpr).toFixed(2));
+						}
+						if (maximumDpr) {
+							dpr = parseFloat(maximumDpr[1]);
+							scale = parseFloat((1 / dpr).toFixed(2));
+						}
+					}
+				}
+
+				if (!dpr && !scale) {
+					var isAndroid = win.navigator.appVersion.match(/android/gi);
+					var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+					var devicePixelRatio = win.devicePixelRatio;
+					if (isIPhone) {
+						// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+						if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+							dpr = 3;
+						} else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+							dpr = 2;
+						} else {
+							dpr = 1;
+						}
+					} else {
+						// 其他设备下，仍旧使用1倍的方案
+						dpr = 1;
+					}
+					scale = 1 / dpr;
+				}
+
+				docEl.setAttribute('data-dpr', dpr);
+				if (!metaEl) {
+					metaEl = doc.createElement('meta');
+					metaEl.setAttribute('name', 'viewport');
+					metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+					if (docEl.firstElementChild) {
+						docEl.firstElementChild.appendChild(metaEl);
+					} else {
+						var wrap = doc.createElement('div');
+						wrap.appendChild(metaEl);
+						doc.write(wrap.innerHTML);
+					}
+				}
+
+				function refreshRem(){
+					var width = docEl.getBoundingClientRect().width;
+					// 设定最大渲染基准值，等于设计稿宽度
+					if (width / dpr > 750) {
+						width = 750 * dpr;
+					}
+					// 750 为设计稿宽度，根据设计稿修改
+					var rem = 100 * (width / 750);
+					docEl.style.fontSize = rem + 'px';
+					flexible.rem = win.rem = rem;
+				}
+
+				win.addEventListener('resize', function() {
+					clearTimeout(tid);
+					tid = setTimeout(refreshRem, 100);
+				}, false);
+				win.addEventListener('pageshow', function(e) {
+					if (e.persisted) {
+						clearTimeout(tid);
+						tid = setTimeout(refreshRem, 100);
+					}
+				}, false);
+
+				if (doc.readyState === 'complete') {
+					doc.body.style.fontSize = 12 * dpr + 'px';
+				} else {
+					doc.addEventListener('DOMContentLoaded', function(e) {
+						doc.body.style.fontSize = 12 * dpr + 'px';
+					}, false);
+				}
+
+				refreshRem();
+
+				flexible.dpr = win.dpr = dpr;
+				flexible.refreshRem = refreshRem;
+				flexible.rem2px = function(d) {
+					var val = parseFloat(d) * this.rem;
+					if (typeof d === 'string' && d.match(/rem$/)) {
+						val += 'px';
+					}
+					return val;
+				}
+				flexible.px2rem = function(d) {
+					var val = parseFloat(d) / this.rem;
+					if (typeof d === 'string' && d.match(/px$/)) {
+						val += 'rem';
+					}
+					return val;
+				}
+
+			})(window, window['lib'] || (window['lib'] = {}));
+		</script>
+		<style>
+			/*reset*/
+			body, h1, h2, h3, h4, h5, h6, p,
+			ul, ol, dl, dd, th, td,
+			form, input, button, textarea, pre {
+				margin: 0;
+				padding: 0;
+			}
+			h1, h2, h3, h4, h5, h6, i, em {
+				font-size: inherit;
+				font-weight: normal;
+				font-style: normal;
+			}
+			input, button, textarea, img {
+				display: block;
+				border: none;
+				outline: none;
+			}
+			li {
+				list-style: none;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			/*移动端 reset*/
+			body, input, button, textarea {
+				font: 12px/1 "Microsoft YaHei", Helvetica;
+			}
+			a, button, input, textarea {
+				-webkit-tap-highlight-color: transparent;
+			}
+			input {
+				-webkit-appearance: none;
+			}
+			input[type=checkbox] {
+				-webkit-appearance: checkbox;
+			}
+			input::-webkit-input-speech-button {
+				display: none;
+			}
+			/*clearfix*/
+			.clearfix {
+				*zoom: 1;
+			}
+			.clearfix:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		</style>
+		<style>
+			html, body {
+				height: 100%;
+			}
+			.download {
+				position: relative;
+				margin: 0 auto;
+				width: 7.5rem;
+				min-height: 11.85rem;
+				max-height: 13.8rem;
+			}
+			.download-logo {
+				padding-top: .6rem;
+				margin: 0 auto;
+				width: 1.16rem;
+				height: 1.16rem;
+			}
+			.download-logo-font {
+				margin: .3rem auto 0 auto;
+				width: 1.62rem;
+				height: .41rem;
+			}
+			.download-show {
+				margin: .16rem auto 0 auto;
+				width: 6.76rem;
+				height: 8.22rem;
+			}
+			.download-link {
+				position: absolute;
+				bottom: 0;
+				width: 7.5rem;
+				height: 3.01rem;
+				background: url(images/blue.png) center no-repeat;
+				background-size: contain;
+			}
+			.download-link a {
+				margin-top: 1.2rem;
+				width: 3.22rem;
+				height: .92rem;
+				background-color: #FFF;
+				border-radius: .5rem;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.download-link a:first-child {
+				float: left;
+				margin-left: .42rem;
+				background-image: url(images/android.png);
+				background-size: 2.48rem .41rem;
+			}
+			.download-link a:last-child {
+				float: right;
+				margin-right: .42rem;
+				background-image: url(images/iphone.png);
+				background-size: 2.26rem .43rem;
+			}
+		</style>
+	</head>
+
+	<body class="download">
+		<img class="download-logo" src="images/logo.png" alt="">
+		<img class="download-logo-font" src="images/logo-font.png" alt="">
+		<img class="download-show" src="images/muban.png" alt="">
+		<div class="download-link clearfix">
+			<a href="http://sj.qq.com/myapp/detail.htm?apkName=com.hzpz.literature"></a>
+			<a href="https://itunes.apple.com/cn/app/%E5%B9%B3%E6%B2%BB%E6%96%87%E5%AD%A6/id1385411069?mt=8"></a>
+		</div>
+	</body>
+</html>
